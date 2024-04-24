@@ -1,0 +1,11 @@
+:root{
+    --header-title: #FFFFFF;
+    --footer-background: #2F303A;
+    --title-color: #212121;
+    --paragraph-color: #757575;
+    --button-color: #2196F3;
+    --logo-color: #000000;
+    --addres-color: rgba(255, 255, 255, 0.6);
+    --header-color: #ECECEC;
+    --our-command-background: #F5F4FA;
+}
