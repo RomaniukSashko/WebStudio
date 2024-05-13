@@ -1,11 +1,11 @@
 :root{
     --header-title: #FFFFFF;
-    --footer-background: #2F303A;
+    --footer-background: #2f303a;
     --title-color: #212121;
     --paragraph-color: #757575;
     --button-color: #2196F3;
     --logo-color: #000000;
-    --addres-color: rgba(255, 255, 255, 0.6);
+    --address-color: rgba(255, 255, 255, 0.6);
     --header-color: #ECECEC;
     --our-command-background: #F5F4FA;
 }
@@ -14,3 +14,248 @@
 /* font-family: "Raleway"; */
 
 /* Шапка */
+/* Фон та інше */
+.header {
+    background-color: var(--header-title);
+    /* width: 1600px;
+    height: 80px;
+    flex-shrink: 0; */
+}
+
+.body {
+    font-family: "Roboto";
+}
+/* Логотип */
+.header-logo {
+    color: var(--button-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+
+.header-link {
+    color: var(--logo-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+/* Навігація */
+.nav-link {
+    color: var(--title-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+}
+
+.nav-link:hover, :focus {
+    color: var(--button-color);
+}
+
+.address {
+    color: var(--button-color);
+}
+/* Пошта та телефон */
+.heading-link {
+    color: var(--paragraph-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+}
+
+.heading-link:hover , :focus {
+    color: var(--button-color);
+}
+/* Секція Герой */
+/* Фон та інше */
+.hero {
+    background-color: var(--footer-background);
+    /* width: 1600px;
+    height: 600px;
+    flex-shrink: 0; */
+}
+/* Заголовок */
+.hero-title {
+    color: var(--header-title);
+    text-align: center;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+}
+/* Кнопка */
+.hero-button {
+    width: 216px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: var(--button-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: var(--header-title);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.96px;
+}
+/* Секція Особливості */
+/* Фон та інше */
+.features {
+    background-color: var(--header-title);
+    /* width: 1600px;
+    height: 2346px; */
+}
+/* Підзаголовки */
+.features-title {
+    width: 270px;
+    color: var(--title-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+/* Текст */
+.features-text {
+    width: 270px;
+    height: 72px;
+    flex-shrink: 0;
+    color: var(--paragraph-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
+/* Елементи списку */
+.features-item {
+    width: 270px;
+    height: 98px;
+    flex-shrink: 0;
+}
+/* Секція Чим ми займаємося */
+/* Фон та інше */
+.occupation {
+    background-color: var(--header-title);
+}
+/* Підзаголовок */
+.occupation-title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+}
+/* Зображення */
+.occupation-team {
+    width: 370px;
+    height: 294px;
+    flex-shrink: 0;
+
+}
+/* Секція Наша команда */
+/* Фон та інше */
+.team {
+    background-color: var(--our-command-background);
+    /* width: 1600px;
+    height: 648px;
+    flex-shrink: 0; */
+}
+/* Підзаголовок */
+.team-title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+}
+/* Імена */
+.team-name {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.19;
+    letter-spacing: 0.48px;
+}
+/* Карточки */
+.team-item {
+    width: 270px;
+    height: 368px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 4px 4px;
+    background: var(--header-title);
+}
+
+.team-image {
+    width: 270px;
+    height: 260px;
+    flex-shrink: 0;
+}
+/* Спеціальність */
+.team-speciality {
+    color: var(--paragraph-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.19;
+    letter-spacing: 0.48px;
+}
+/* Підвал */
+/* Фон та інше */
+.footer {
+    background-color: var(--footer-background);
+}
+
+.footer-address {
+    width: 231px;
+    height: 81px;
+    flex-shrink: 0;
+}
+/* Логотип */
+.footer-logo {
+    color: var(--button-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+
+.footer-link {
+    color: var(--logo-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+/* Локація, пошта та телефон */
+.address-location {
+    width: 231px;
+    height: 21px;
+    flex-shrink: 0;
+    color: var(--header-title);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
+
+.address-link {
+    width: 136px;
+    height: 21px;
+    flex-shrink: 0;
+    color: var(--address-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
