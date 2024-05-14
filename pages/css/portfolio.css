@@ -8,7 +8,7 @@
     --address-color: rgba(255, 255, 255, 0.6);
     --header-color: #ECECEC;
     --our-command-background: #F5F4FA;
-    --hero-button: #1d84d8;
+    --card-border: #EEEEEE;
 }
 
 /* font-family: "Roboto"; */
@@ -72,145 +72,59 @@
 .heading-link:hover , :focus {
     color: var(--button-color);
 }
-/* Секція Герой */
-/* Фон та інше */
-.hero {
-    background-color: var(--footer-background);
-    /* width: 1600px;
-    height: 600px;
+/* Секція Кнопок */
+.buttons {
+    /* width: 575px;
+    height: 38px;
     flex-shrink: 0; */
+    background: var(--header-title);
 }
-/* Заголовок */
-.hero-title {
-    color: var(--header-title);
-    text-align: center;
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.36;
-    letter-spacing: 2.64px;
-    text-transform: uppercase;
-}
-/* Кнопка */
-.hero-button {
-    width: 216px;
-    height: 50px;
-    flex-shrink: 0;
+/* Кнопки */
+.buttons-button {
     border-radius: 4px;
-    background: var(--button-color);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    color: var(--header-title);
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.88;
-    letter-spacing: 0.96px;
-}
-
-.hero-button:hover:focus {
-    background-color: var(--hero-button);
-}
-/* Секція Особливості */
-/* Фон та інше */
-.features {
-    background-color: var(--header-title);
-    /* width: 1600px;
-    height: 2346px; */
-}
-/* Підзаголовки */
-.features-title {
-    width: 270px;
-    color: var(--title-color);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
-}
-/* Текст */
-.features-text {
-    width: 270px;
-    height: 72px;
-    flex-shrink: 0;
-    color: var(--paragraph-color);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.42px;
-}
-/* Елементи списку */
-.features-item {
-    width: 270px;
-    height: 98px;
-    flex-shrink: 0;
-}
-/* Секція Чим ми займаємося */
-/* Фон та інше */
-.occupation {
-    background-color: var(--header-title);
-}
-/* Підзаголовок */
-.occupation-title {
-    color: var(--title-color);
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 1.08px;
-}
-/* Зображення */
-.occupation-team {
-    width: 370px;
-    height: 294px;
-    flex-shrink: 0;
-
-}
-/* Секція Наша команда */
-/* Фон та інше */
-.team {
-    background-color: var(--our-command-background);
-    /* width: 1600px;
-    height: 648px;
-    flex-shrink: 0; */
-}
-/* Підзаголовок */
-.team-title {
-    color: var(--title-color);
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 1.08px;
-}
-/* Імена */
-.team-name {
+    background: var(--our-command-background);
     color: var(--title-color);
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.19;
+    line-height: 1.63;
     letter-spacing: 0.48px;
 }
-/* Карточки */
-.team-item {
-    width: 270px;
-    height: 368px;
+
+.buttons-button:hover, .buttons-button:focus {
+    background-color: var(--button-color);
+    color: var(--header-title);
+}
+/* Секція Проєкти */
+.projects-item {
+    width: 370px;
+    height: 404px;
     flex-shrink: 0;
-    border-radius: 0px 0px 4px 4px;
+    border: 1px solid var(--card-border);
     background: var(--header-title);
 }
 
-.team-image {
-    width: 270px;
-    height: 260px;
+.projects-image {
+    width: 370px;
+    height: 294px;
     flex-shrink: 0;
 }
-/* Спеціальність */
-.team-speciality {
+
+.projects-name {
+    width: 322px;
+    color: var(--title-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.08px;
+}
+
+.projects-type {
+    width: 322px;
     color: var(--paragraph-color);
-    text-align: center;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.19;
+    line-height: 1.88;
     letter-spacing: 0.48px;
 }
 /* Підвал */

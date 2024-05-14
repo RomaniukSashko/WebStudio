@@ -1,0 +1,142 @@
+:root{
+    --header-title: #FFFFFF;
+    --footer-background: #2f303a;
+    --title-color: #212121;
+    --paragraph-color: #757575;
+    --button-color: #2196F3;
+    --logo-color: #000000;
+    --address-color: rgba(255, 255, 255, 0.6);
+    --header-color: #ECECEC;
+    --our-command-background: #F5F4FA;
+    --hero-button: #1d84d8;
+}
+
+/* font-family: "Roboto"; */
+/* font-family: "Raleway"; */
+
+/* Шапка */
+/* Фон та інше */
+.header {
+    background-color: var(--header-title);
+    /* width: 1600px;
+    height: 80px;
+    flex-shrink: 0; */
+}
+
+.body {
+    font-family: "Roboto";
+}
+/* Логотип */
+.header-logo {
+    color: var(--button-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+
+.header-link {
+    color: var(--logo-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+/* Навігація */
+.nav-link {
+    color: var(--title-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+}
+
+.nav-link:hover, :focus {
+    color: var(--button-color);
+}
+
+.address {
+    color: var(--button-color);
+}
+/* Пошта та телефон */
+.heading-link {
+    color: var(--paragraph-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+}
+
+.heading-link:hover , :focus {
+    color: var(--button-color);
+}
+/* Основний вміст */
+.main-title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+}
+/* Підвал */
+/* Фон та інше */
+.footer {
+    background-color: var(--footer-background);
+}
+
+.footer-address {
+    width: 231px;
+    height: 81px;
+    flex-shrink: 0;
+}
+/* Логотип */
+.footer-logo {
+    color: var(--button-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+
+.footer-link {
+    color: var(--header-title);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+/* Локація, пошта та телефон */
+.address-location {
+    width: 231px;
+    height: 21px;
+    flex-shrink: 0;
+    color: var(--header-title);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
+
+.address-location:hover, .address-location:focus {
+    color: var(--button-color);
+}
+
+.address-link {
+    width: 136px;
+    height: 21px;
+    flex-shrink: 0;
+    color: var(--address-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
+
+.address-link:hover, .address-link:focus{
+    color: var(--button-color);
+}
