@@ -16,14 +16,23 @@
 
 /* Нормалізація та скидання стилів */
 
-h1, h2, h3, h4, h5, h6, p, a, ul, button {
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, p, ul{
     margin: 0;
     padding: 0;
-    border: 0;
-    list-style: none;
-    text-decoration: none;
-}
-
+  }
+  
+  img {
+    display: block;
+  }
+  
 /* Шапка */
 /* Фон та інше */
 .header {
