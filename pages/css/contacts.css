@@ -14,32 +14,18 @@
 /* font-family: "Roboto"; */
 /* font-family: "Raleway"; */
 
-/* Нормалізація та скидання стилів */
-
-ul {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  h1, h2, h3, p, ul{
-    margin: 0;
-    padding: 0;
-  }
-  
-  img {
-    display: block;
-  }
-  
+/* Container */
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 /* Шапка */
 /* Фон та інше */
 .header {
     background-color: var(--header-title);
-    /* width: 1600px;
-    height: 80px;
-    flex-shrink: 0; */
 }
 
 .body {
@@ -94,7 +80,6 @@ ul {
 /* Основний вміст */
 .main-title {
     color: var(--title-color);
-    text-align: center;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.17;

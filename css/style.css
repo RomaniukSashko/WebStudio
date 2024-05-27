@@ -14,25 +14,14 @@
 /* font-family: "Roboto"; */
 /* font-family: "Raleway"; */
 
-/* Нормалізація та скидання стилів */
-
-ul {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  h1, h2, h3, p, ul{
-    margin: 0;
-    padding: 0;
-  }
-  
-  img {
-    display: block;
-  }
-
+/* Container */
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 /* Шапка */
 /* Фон та інше */
 .header {
@@ -95,19 +84,17 @@ ul {
 /* Фон та інше */
 .hero {
     background-color: var(--footer-background);
-    /* width: 1600px;
-    height: 600px;
-    flex-shrink: 0; */
 }
 /* Заголовок */
 .hero-title {
     color: var(--header-title);
-    text-align: center;
     font-size: 44px;
     font-weight: 900;
     line-height: 1.36;
     letter-spacing: 2.64px;
     text-transform: uppercase;
+    /* margin-right: 285px ;
+    margin-left: 285px ; */
 }
 /* Кнопка */
 .hero-button {
@@ -118,7 +105,6 @@ ul {
     background: var(--button-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: var(--header-title);
-    text-align: center;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.88;
@@ -194,7 +180,6 @@ ul {
 /* Підзаголовок */
 .team-title {
     color: var(--title-color);
-    text-align: center;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.17;
@@ -203,7 +188,6 @@ ul {
 /* Імена */
 .team-name {
     color: var(--title-color);
-    text-align: center;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.19;
@@ -226,7 +210,6 @@ ul {
 /* Спеціальність */
 .team-speciality {
     color: var(--paragraph-color);
-    text-align: center;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.19;
