@@ -21,11 +21,14 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    outline: solid burlywood;
 }
 /* Шапка */
 /* Фон та інше */
 .header {
     background-color: var(--header-title);
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .body {
@@ -89,6 +92,8 @@
 /* Фон та інше */
 .footer {
     background-color: var(--footer-background);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-address {

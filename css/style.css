@@ -21,14 +21,14 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    outline: solid burlywood;
 }
 /* Шапка */
 /* Фон та інше */
 .header {
     background-color: var(--header-title);
-    /* width: 1600px;
-    height: 80px;
-    flex-shrink: 0; */
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .body {
@@ -84,6 +84,8 @@
 /* Фон та інше */
 .hero {
     background-color: var(--footer-background);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 /* Заголовок */
 .hero-title {
@@ -93,8 +95,7 @@
     line-height: 1.36;
     letter-spacing: 2.64px;
     text-transform: uppercase;
-    /* margin-right: 285px ;
-    margin-left: 285px ; */
+    /* text-align: center; */
 }
 /* Кнопка */
 .hero-button {
@@ -118,8 +119,8 @@
 /* Фон та інше */
 .features {
     background-color: var(--header-title);
-    /* width: 1600px;
-    height: 2346px; */
+    padding-top: 94px;
+    padding-bottom: 47px;
 }
 /* Підзаголовки */
 .features-title {
@@ -152,11 +153,12 @@
 /* Фон та інше */
 .occupation {
     background-color: var(--header-title);
+    padding-top: 47px;
+    padding-bottom: 94px;
 }
 /* Підзаголовок */
 .occupation-title {
     color: var(--title-color);
-    text-align: center;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.17;
@@ -173,9 +175,8 @@
 /* Фон та інше */
 .team {
     background-color: var(--our-command-background);
-    /* width: 1600px;
-    height: 648px;
-    flex-shrink: 0; */
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 /* Підзаголовок */
 .team-title {
@@ -219,6 +220,8 @@
 /* Фон та інше */
 .footer {
     background-color: var(--footer-background);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-address {

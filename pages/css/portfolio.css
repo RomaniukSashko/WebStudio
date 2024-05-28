@@ -21,14 +21,14 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    outline: solid burlywood;
 }
 /* Шапка */
 /* Фон та інше */
 .header {
     background-color: var(--header-title);
-    /* width: 1600px;
-    height: 80px;
-    flex-shrink: 0; */
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .body {
@@ -82,10 +82,9 @@
 }
 /* Секція Кнопок */
 .buttons {
-    /* width: 575px;
-    height: 38px;
-    flex-shrink: 0; */
     background: var(--header-title);
+    padding-top: 94px;
+    padding-bottom: 25px;
 }
 /* Кнопки */
 .buttons-button {
@@ -103,6 +102,12 @@
     color: var(--header-title);
 }
 /* Секція Проєкти */
+/* Фон та інше */
+.projects {
+    padding-top: 25px;
+    padding-bottom: 94px;
+}
+/* Карточки */
 .projects-item {
     width: 370px;
     height: 404px;
@@ -138,6 +143,8 @@
 /* Фон та інше */
 .footer {
     background-color: var(--footer-background);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-address {
