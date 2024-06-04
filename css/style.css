@@ -28,6 +28,10 @@
     display: flex;
     align-items: center;
 }
+
+.header-nav {
+    margin-left: 93px;
+}
 /* Фон та інше */
 .header {
     background-color: var(--header-title);
@@ -59,7 +63,6 @@
 /* Навігація */
 .nav-list {
     display: flex;
-    margin-left: 93px;
     gap: 50px;
 }
 
@@ -81,7 +84,7 @@
 /* Пошта та телефон */
 .header-list {
     display: flex;
-    margin-left: 344px;
+    margin-left: auto;
     gap: 50px;
 }
 
@@ -117,6 +120,8 @@
     letter-spacing: 2.64px;
     text-transform: uppercase;
     margin-bottom: 30px;
+    width: 696px;
+    text-align: center;
 }
 /* Кнопка */
 .hero-button {
@@ -151,6 +156,7 @@
     line-height: 1.14;
     letter-spacing: 0.42px;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 /* Текст */
 .features-text {
@@ -179,6 +185,7 @@
     background-color: var(--header-title);
     padding-top: 47px;
     padding-bottom: 94px;
+    text-align: center;
 }
 /* Підзаголовок */
 .occupation-title {
@@ -187,17 +194,8 @@
     font-weight: 700;
     line-height: 1.17;
     letter-spacing: 1.08px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 50px;
 }
-/* Зображення */
-/* .occupation-team {
-    width: 370px;
-    height: 294px;
-    flex-shrink: 0;
-
-} */
 /* Список */
 .occupation-list {
     display: flex;
@@ -210,6 +208,7 @@
     background-color: var(--our-command-background);
     padding-top: 94px;
     padding-bottom: 94px;
+    text-align: center;
 }
 /* Підзаголовок */
 .team-title {
@@ -218,8 +217,6 @@
     font-weight: 700;
     line-height: 1.17;
     letter-spacing: 1.08px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 50px;
 }
 /* Карточки */
@@ -231,7 +228,6 @@
 .team-item {
     width: 270px;
     height: 368px;
-    flex-shrink: 0;
     border-radius: 0px 0px 4px 4px;
     background: var(--header-title);
 }
@@ -239,7 +235,6 @@
 .team-image {
     width: 270px;
     height: 260px;
-    flex-shrink: 0;
 }
 /* Текст */
 .team-name {
@@ -248,9 +243,6 @@
     font-weight: 500;
     line-height: 1.19;
     letter-spacing: 0.48px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     margin-top: 30px;
 }
 
@@ -260,9 +252,6 @@
     font-weight: 400;
     line-height: 1.19;
     letter-spacing: 0.48px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     margin-top: 10px;
 }
 /* Підвал */
