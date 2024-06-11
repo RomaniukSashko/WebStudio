@@ -21,7 +21,7 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    outline: solid burlywood;
+    /* outline: solid burlywood; */
 }
 /* Шапка */
 .heading {
@@ -37,6 +37,7 @@
     background-color: var(--header-title);
     padding-top: 24px;
     padding-bottom: 25px;
+    border-bottom: 1px var(--header-color) solid;
 }
 
 .body {
@@ -106,6 +107,9 @@
     font-weight: 700;
     line-height: 1.17;
     letter-spacing: 1.08px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 /* Підвал */
 /* Фон та інше */

@@ -37,6 +37,7 @@
     background-color: var(--header-title);
     padding-top: 24px;
     padding-bottom: 25px;
+    border-bottom: 1px var(--header-color) solid;
 }
 
 .body {
