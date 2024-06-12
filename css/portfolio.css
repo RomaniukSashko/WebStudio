@@ -100,13 +100,17 @@
 .heading-link:hover , :focus {
     color: var(--button-color);
 }
+/* Секція */
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 /* Кнопки */
 .buttons-list {
     display: flex;
     justify-content: center;
     gap: 8px;
     margin-bottom: 50px;
-    padding-top: 94px;
 }
 
 .buttons-button {
@@ -131,7 +135,6 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    padding-bottom: 94px;
 }
 
 .projects-item {
