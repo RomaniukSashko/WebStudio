@@ -138,17 +138,13 @@
 }
 
 .projects-item {
-    width: 370px;
-    height: 404px;
-    flex-shrink: 0;
     border: 1px solid var(--card-border);
     background: var(--header-title);
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .projects-image {
-    width: 370px;
-    height: 294px;
-    flex-shrink: 0;
+    width: 100%;
 }
 
 .project-text {
@@ -156,7 +152,6 @@
 }
 
 .projects-name {
-    width: 322px;
     color: var(--title-color);
     font-size: 18px;
     font-weight: 700;
@@ -166,7 +161,6 @@
 }
 
 .projects-type {
-    width: 322px;
     color: var(--paragraph-color);
     font-size: 16px;
     font-weight: 400;
