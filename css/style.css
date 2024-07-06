@@ -146,17 +146,12 @@
 .features {
     background-color: var(--header-title);
     padding-top: 94px;
-    padding-bottom: 197px;
+    padding-bottom: 94px;
 }
 /* Список */
 .features-list {
     display: flex;
     gap: 30px;
-}
-
-.features-item {
-    width: 270px;
-    height: 98px;
 }
 
 .features-item:nth-child(1)::before {
