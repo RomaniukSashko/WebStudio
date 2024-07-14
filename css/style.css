@@ -164,7 +164,6 @@
     height: 120px;
     background-color: var(--our-command-background);
     border-radius: 4px;
-    background-size: contain;
     background-image: url("../images/antenna.png");
     display: inline-flex;
     margin-bottom: 30px;
@@ -179,7 +178,6 @@
     height: 120px;
     background-color: var(--our-command-background);
     border-radius: 4px;
-    background-size: contain;
     background-image: url("../images/clock.png");
     display: inline-flex;
     margin-bottom: 30px;
@@ -194,7 +192,6 @@
     height: 120px;
     background-color: var(--our-command-background);
     border-radius: 4px;
-    background-size: contain;
     background-image: url("../images/diagram.png");
     display: inline-flex;
     margin-bottom: 30px;
@@ -209,7 +206,6 @@
     height: 120px;
     background-color: var(--our-command-background);
     border-radius: 4px;
-    background-size: contain;
     background-image: url("../images/astronaut.png");
     display: inline-flex;
     margin-bottom: 30px;
