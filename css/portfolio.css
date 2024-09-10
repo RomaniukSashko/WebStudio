@@ -8,7 +8,9 @@
     --address-color: rgba(255, 255, 255, 0.6);
     --header-color: #ECECEC;
     --our-command-background: #F5F4FA;
-    --card-border: #EEEEEE;
+    --hero-button: #1d84d8;
+    --icon-color: #AFB1B8;
+    --social-bcg: #44454E;
 }
 
 /* font-family: "Roboto"; */
@@ -95,10 +97,30 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.heading-link:hover , :focus {
+.heading-link:hover,
+.heading-link:focus {
     color: var(--button-color);
+    .header-icon {
+        fill: var(--button-color);
+    }
+}
+
+.header-icon {
+    width: 16px;
+    height: 12px;
+    flex-shrink: 0;
+    fill: var(--paragraph-color);
+}
+
+.header-icon:nth-child(2) {
+    width: 10px;
+    height: 16px;
 }
 /* Секція */
 .projects {
@@ -180,6 +202,11 @@
     padding-bottom: 60px;
 }
 
+.bottom {
+    display: flex;
+    gap: 94px;
+}
+
 .footer-address {
     width: 231px;
     height: 81px;
@@ -245,4 +272,43 @@
 
 .address-link:hover, .address-link:focus{
     color: var(--button-color);
+}
+/* Соцмережі */
+.ft-social-title {
+    color: var(--header-title);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ft-social-link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--social-bcg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ft-social-link:hover,
+.ft-social-link:focus {
+    background-color: var(--button-color);
+}
+
+.ft-social-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--header-title);
 }

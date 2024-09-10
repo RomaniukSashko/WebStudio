@@ -9,11 +9,16 @@
     --header-color: #ECECEC;
     --our-command-background: #F5F4FA;
     --hero-button: #1d84d8;
+    --icon-color: #AFB1B8;
+    --social-bcg: #44454E;
 }
 
 /* font-family: "Roboto"; */
 /* font-family: "Raleway"; */
 
+.body {
+    font-family: "Roboto";
+}
 /* Container */
 .container {
     width: 1200px;
@@ -38,10 +43,6 @@
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: 1px var(--header-color) solid;
-}
-
-.body {
-    font-family: "Roboto";
 }
 /* Логотип */
 .header-logo {
@@ -95,10 +96,30 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.heading-link:hover , :focus {
+.heading-link:hover,
+.heading-link:focus {
     color: var(--button-color);
+    .header-icon {
+        fill: var(--button-color);
+    }
+}
+
+.header-icon {
+    width: 16px;
+    height: 12px;
+    flex-shrink: 0;
+    fill: var(--paragraph-color);
+}
+
+.header-icon:nth-child(2) {
+    width: 10px;
+    height: 16px;
 }
 /* Секція Герой */
 .hero-dad {
@@ -281,9 +302,10 @@
     justify-content: center;
     gap: 30px;
 }
+
 .team-item {
     width: 270px;
-    height: 368px;
+    /* height: 428px; */
     border-radius: 0px 0px 4px 4px;
     background: var(--header-title);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
@@ -295,9 +317,10 @@
 }
 /* Текст */
 .team-text {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 16px;
 }
+
 .team-name {
     color: var(--title-color);
     font-size: 16px;
@@ -314,12 +337,97 @@
     letter-spacing: 0.48px;
     margin-top: 10px;
 }
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--button-color);
+    .social-icon {
+        fill: var(--header-title);
+    }
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: var(--icon-color);
+}
+/* Секція Постійні Клієнти */
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients-title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.clients-link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    border: 1px solid var(--button-color);
+    .clients-icon {
+        fill: var(--button-color);
+    }
+}
+
+.clients-icon {
+    width: 106px;
+    height: 60px;
+    flex-shrink: 0;
+    fill: var(--icon-color);
+    padding: 9px 11px;
+}
 /* Підвал */
 /* Фон та інше */
 .footer {
     background-color: var(--footer-background);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.bottom {
+    display: flex;
+    gap: 94px;
 }
 
 .footer-address {
@@ -387,4 +495,43 @@
 
 .address-link:hover, .address-link:focus{
     color: var(--button-color);
+}
+/* Соцмережі */
+.ft-social-title {
+    color: var(--header-title);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ft-social-link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--social-bcg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ft-social-link:hover,
+.ft-social-link:focus {
+    background-color: var(--button-color);
+}
+
+.ft-social-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--header-title);
 }
