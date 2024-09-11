@@ -102,8 +102,14 @@
     gap: 10px;
 }
 
-.header-item:nth-child(1) > .heading-link:hover, .heading-link:focus
-.header-item:nth-child(2) > .heading-link:focus, .heading-link:hover {
+.header-item:nth-child(1) > .heading-link:hover, .heading-link:focus {
+    color: var(--button-color);
+    .header-icon {
+        fill: var(--button-color);
+    }
+}
+
+.header-item:nth-child(2) > .heading-link:hover, .heading-link:focus {
     color: var(--button-color);
     .header-icon {
         fill: var(--button-color);
