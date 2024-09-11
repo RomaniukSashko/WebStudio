@@ -100,6 +100,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    /* height: 12px; */
 }
 
 .heading-link:hover,
@@ -110,16 +111,16 @@
     }
 }
 
-.header-icon {
+.header-item:nth-child(1) > .heading-link > .header-icon {
     width: 16px;
     height: 12px;
-    flex-shrink: 0;
     fill: var(--paragraph-color);
 }
 
-.header-icon:nth-child(2) {
+.header-item:nth-child(2) > .heading-link > .header-icon {
     width: 10px;
     height: 16px;
+    fill: var(--paragraph-color);
 }
 /* Секція Герой */
 .hero-dad {
