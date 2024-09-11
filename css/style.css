@@ -86,8 +86,8 @@
 /* Пошта та телефон */
 .header-list {
     display: flex;
-    margin-left: auto;
     gap: 30px;
+    margin-left: auto;
 }
 
 .heading-link {
