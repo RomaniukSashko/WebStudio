@@ -156,8 +156,7 @@
 }
 /* Кнопка */
 .hero-button {
-    width: 216px;
-    height: 50px;
+    padding: 10px 32px;
     border: none;
     border-radius: 4px;
     background: var(--button-color);
@@ -285,6 +284,31 @@
     justify-content: center;
     gap: 30px;
 }
+
+.occupation-item {
+    position: relative;
+}
+
+.occupation-background {
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.occupation-text {
+    color: var(--header-title);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
 /* Секція Наша команда */
 /* Фон та інше */
 .team {
@@ -311,7 +335,6 @@
 
 .team-item {
     width: 270px;
-    /* height: 428px; */
     border-radius: 0px 0px 4px 4px;
     background: var(--header-title);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
@@ -424,7 +447,12 @@
     padding: 9px 11px;
 }
 /* Підвал */
+/* Адреса */
 /* Фон та інше */
+.ft-address {
+    margin-right: 70px;
+}
+
 .footer {
     background-color: var(--footer-background);
     padding-top: 60px;
@@ -433,7 +461,6 @@
 
 .bottom {
     display: flex;
-    gap: 94px;
 }
 
 .footer-address {
@@ -503,6 +530,10 @@
     color: var(--button-color);
 }
 /* Соцмережі */
+.ft-social {
+    margin-right: 94px;
+}
+
 .ft-social-title {
     color: var(--header-title);
     font-size: 14px;
@@ -539,5 +570,59 @@
 .ft-social-icon {
     width: 20px;
     height: 20px;
+    fill: var(--header-title);
+}
+/* Підписка */
+.info-title {
+    color: var(--header-title);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.info-form {
+    display: flex;
+    gap: 12px;
+}
+
+.info-field {
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(33, 150, 243, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px 16px;
+    color: var(--address-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0.48px;
+}
+
+.info-button {
+    padding: 10px 28px;
+    border: none;
+    border-radius: 4px;
+    background: var(--button-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: var(--header-title);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.96px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
     fill: var(--header-title);
 }
