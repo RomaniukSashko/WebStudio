@@ -579,7 +579,7 @@
     fill: var(--header-title);
 }
 /* ===== Підписка ===== */
-.info-title {
+.subscribe-title {
     color: var(--header-title);
     font-size: 14px;
     font-weight: 700;
@@ -590,12 +590,12 @@
     margin-bottom: 20px;
 }
 
-.info-form {
+.subscribe-form {
     display: flex;
     gap: 12px;
 }
 
-.info-field {
+.subscribe-field {
     width: 358px;
     height: 50px;
     border-radius: 4px;
@@ -610,13 +610,13 @@
     letter-spacing: 0.48px;
 }
 
-.info-field:hover,
-.info-field:focus {
+.subscribe-field:hover,
+.subscribe-field:focus {
     border: none;
     outline: 1px solid var(--button-color);
 }
 
-.info-button {
+.subscribe-button {
     padding: 10px 28px;
     border: none;
     border-radius: 4px;
@@ -633,13 +633,13 @@
     gap: 10px;
 }
 
-.info-button:hover,
-.info-button:focus {
+.subscribe-button:hover,
+.subscribe-button:focus {
     background-color: var(--active-button);
     outline: none;
 }
 
-.info-icon {
+.subscribe-icon {
     width: 24px;
     height: 24px;
     fill: var(--header-title);
