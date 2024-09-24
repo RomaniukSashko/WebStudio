@@ -1,4 +1,5 @@
-:root{
+/* ===== Змінні кольорів ===== */
+:root {
     --header-title: #FFFFFF;
     --footer-background: #2f303a;
     --title-color: #212121;
@@ -8,10 +9,12 @@
     --address-color: rgba(255, 255, 255, 0.6);
     --header-color: #ECECEC;
     --our-command-background: #F5F4FA;
-    --hero-button: #1d84d8;
+    --active-button: #1d84d8;
     --icon-color: #AFB1B8;
     --social-bcg: #44454E;
 }
+
+/* ===== Шрифти ===== */
 
 /* font-family: "Roboto"; */
 /* font-family: "Raleway"; */
@@ -19,7 +22,7 @@
 .body {
     font-family: "Roboto";
 }
-/* Container */
+/* ===== Контейнер ===== */
 .container {
     width: 1200px;
     margin-left: auto;
@@ -28,30 +31,17 @@
     padding-right: 15px;
     /* outline: solid burlywood; */
 }
-/* Шапка */
-.heading {
-    display: flex;
-    align-items: center;
-}
-
-.header-nav {
-    margin-left: 93px;
-}
-/* Фон та інше */
+/* ===== Шапка ===== */
 .header {
     background-color: var(--header-title);
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: 1px var(--header-color) solid;
 }
-/* Логотип */
-.header-logo {
-    color: var(--button-color);
-    font-family: "Raleway";
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.39;
-    letter-spacing: 0.78px;
+
+.heading {
+    display: flex;
+    align-items: center;
 }
 
 .header-link {
@@ -61,6 +51,19 @@
     font-weight: 700;
     line-height: 1.39;
     letter-spacing: 0.78px;
+}
+
+.header-logo {
+    color: var(--button-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
+}
+
+.header-nav {
+    margin-left: 93px;
 }
 /* Навігація */
 .nav-list {
@@ -76,7 +79,8 @@
     letter-spacing: 0.28px;
 }
 
-.nav-link:hover, :focus {
+.nav-link:hover, 
+.nav-link:focus {
     color: var(--button-color);
 }
 
@@ -127,13 +131,8 @@
     height: 16px;
     fill: var(--paragraph-color);
 }
-/* Секція Герой */
-.hero-dad {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-/* Фон та інше */
+/* ===== Основна частина ===== */
+/* ===== Секція Герой ===== */
 .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)) ,url(../images/backgroundimagehero.jpg);
     background-repeat: no-repeat;
@@ -141,6 +140,12 @@
     background-size: cover;
     padding-top: 200px;
     padding-bottom: 200px;
+}
+
+.hero-dad {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 /* Заголовок */
 .hero-title {
@@ -168,11 +173,12 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.hero-button:hover:focus {
-    background-color: var(--hero-button);
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--active-button);
+    outline: none;
 }
-/* Секція Особливості */
-/* Фон та інше */
+/* ===== Секція Особливості ===== */
 .features {
     background-color: var(--header-title);
     padding-top: 94px;
@@ -240,7 +246,7 @@
     background-size: 70px 70px;
 }
 /* Текст */
-.features-title {
+.features-subtitle {
     width: 270px;
     color: var(--title-color);
     font-size: 14px;
@@ -261,7 +267,7 @@
     line-height: 1.71;
     letter-spacing: 0.42px;
 }
-/* Секція Чим ми займаємося */
+/* ===== Секція Чим Ми Займаємося ===== */
 /* Фон та інше */
 .occupation {
     background-color: var(--header-title);
@@ -309,7 +315,7 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
 }
-/* Секція Наша команда */
+/* ===== Секція Наша Команда ===== */
 /* Фон та інше */
 .team {
     background-color: var(--our-command-background);
@@ -386,6 +392,8 @@
 .social-link:hover,
 .social-link:focus {
     background-color: var(--button-color);
+    outline: none;
+    border: 1px solid var(--button-color);
     .social-icon {
         fill: var(--header-title);
     }
@@ -397,7 +405,7 @@
     flex-shrink: 0;
     fill: var(--icon-color);
 }
-/* Секція Постійні Клієнти */
+/* ===== Секція Постійні Клієнти ===== */
 .clients {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -433,6 +441,7 @@
 
 .clients-link:hover,
 .clients-link:focus {
+    outline: none;
     border: 1px solid var(--button-color);
     .clients-icon {
         fill: var(--button-color);
@@ -446,13 +455,7 @@
     fill: var(--icon-color);
     padding: 9px 11px;
 }
-/* Підвал */
-/* Адреса */
-/* Фон та інше */
-.ft-address {
-    margin-right: 70px;
-}
-
+/* ===== Підвал ===== */
 .footer {
     background-color: var(--footer-background);
     padding-top: 60px;
@@ -461,6 +464,10 @@
 
 .bottom {
     display: flex;
+}
+/* ===== Адреса ===== */
+.ft-address {
+    margin-right: 70px;
 }
 
 .footer-address {
@@ -472,15 +479,6 @@
     gap: 9px;
 }
 /* Логотип */
-.footer-logo {
-    color: var(--button-color);
-    font-family: "Raleway";
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.39;
-    letter-spacing: 0.78px;
-}
-
 .footer-link {
     color: var(--header-title);
     font-family: "Raleway";
@@ -490,11 +488,16 @@
     letter-spacing: 0.78px;
 }
 
-.footer-link:hover, :focus {
+.footer-logo {
     color: var(--button-color);
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.39;
+    letter-spacing: 0.78px;
 }
 /* Локація, пошта та телефон */
-.address-list{
+.address-list {
     display: flex;
     flex-direction: column;
     gap: 9px;
@@ -511,7 +514,8 @@
     letter-spacing: 0.42px;
 }
 
-.address-location:hover, .address-location:focus {
+.address-location:hover, 
+.address-location:focus {
     color: var(--button-color);
 }
 
@@ -526,10 +530,11 @@
     letter-spacing: 0.42px;
 }
 
-.address-link:hover, .address-link:focus{
+.address-link:hover, 
+.address-link:focus{
     color: var(--button-color);
 }
-/* Соцмережі */
+/* ===== Соцмережі ===== */
 .ft-social {
     margin-right: 94px;
 }
@@ -565,6 +570,7 @@
 .ft-social-link:hover,
 .ft-social-link:focus {
     background-color: var(--button-color);
+    outline: none;
 }
 
 .ft-social-icon {
@@ -572,7 +578,7 @@
     height: 20px;
     fill: var(--header-title);
 }
-/* Підписка */
+/* ===== Підписка ===== */
 .info-title {
     color: var(--header-title);
     font-size: 14px;
@@ -604,6 +610,12 @@
     letter-spacing: 0.48px;
 }
 
+.info-field:hover,
+.info-field:focus {
+    border: none;
+    outline: 1px solid var(--button-color);
+}
+
 .info-button {
     padding: 10px 28px;
     border: none;
@@ -619,6 +631,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.info-button:hover,
+.info-button:focus {
+    background-color: var(--active-button);
+    outline: none;
 }
 
 .info-icon {
@@ -763,8 +781,6 @@
 }
 
 .modal-button {
-    /* width: 200px;
-    height: 50px; */
     padding: 10px 52px;
     border-radius: 4px;
     border: none;
