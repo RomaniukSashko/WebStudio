@@ -38,11 +38,14 @@
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: 1px var(--header-color) solid;
+    /* width: 100%;
+    top: 0; */
 }
 
 .heading {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .header-link {
@@ -85,8 +88,20 @@
     color: var(--button-color);
 }
 
-.address {
+.active {
     color: var(--button-color);
+}
+
+.active::after {
+    content: "";
+    width: 48px;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    display: block;
+    margin-top: 31px;
+    position: absolute;
+    left: 251px;
 }
 /* Пошта та телефон */
 .header-list {
