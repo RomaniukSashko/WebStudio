@@ -67,7 +67,7 @@
 .header-nav {
     margin-left: 93px;
 }
-/* Навігація */
+/* ===== Навігація ===== */
 .nav-list {
     display: flex;
     gap: 50px;
@@ -101,7 +101,7 @@
     position: absolute;
     left: 344px;
 }
-/* Пошта та телефон */
+/* ===== Пошта та телефон ===== */
 .header-list {
     display: flex;
     gap: 30px;
@@ -147,12 +147,11 @@
 }
 /* ===== Основна Частина ===== */
 /* ===== Секція ===== */
-/* ===== Список Кнопок ===== */
 .projects {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-/* Кнопки */
+/* ===== Список Кнопок ===== */
 .buttons-list {
     display: flex;
     justify-content: center;
@@ -180,7 +179,6 @@
     outline: none;
 }
 /* ===== Список Проєктів ===== */
-/* Карточки */
 .projects-list {
     display: flex;
     gap: 30px;

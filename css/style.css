@@ -38,8 +38,6 @@
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: 1px var(--header-color) solid;
-    /* width: 100%;
-    top: 0; */
 }
 
 .heading {
@@ -69,7 +67,7 @@
 .header-nav {
     margin-left: 93px;
 }
-/* Навігація */
+/* ===== Навігація ===== */
 .nav-list {
     display: flex;
     gap: 50px;
@@ -103,7 +101,7 @@
     position: absolute;
     left: 251px;
 }
-/* Пошта та телефон */
+/* ===== Пошта та телефон ===== */
 .header-list {
     display: flex;
     gap: 30px;
@@ -163,7 +161,7 @@
     display: flex;
     flex-direction: column;
 }
-/* Заголовок */
+
 .hero-title {
     color: var(--header-title);
     font-size: 44px;
@@ -175,7 +173,7 @@
     width: 696px;
     text-align: center;
 }
-/* Кнопка */
+
 .hero-button {
     padding: 10px 32px;
     border: none;
@@ -284,14 +282,13 @@
     letter-spacing: 0.42px;
 }
 /* ===== Секція Чим Ми Займаємося ===== */
-/* Фон та інше */
 .occupation {
     background-color: var(--header-title);
     padding-top: 47px;
     padding-bottom: 94px;
     text-align: center;
 }
-/* Підзаголовок */
+
 .occupation-title {
     color: var(--title-color);
     font-size: 36px;
@@ -332,14 +329,13 @@
     text-transform: uppercase;
 }
 /* ===== Секція Наша Команда ===== */
-/* Фон та інше */
 .team {
     background-color: var(--our-command-background);
     padding-top: 94px;
     padding-bottom: 94px;
     text-align: center;
 }
-/* Підзаголовок */
+
 .team-title {
     color: var(--title-color);
     font-size: 36px;
