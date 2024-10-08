@@ -79,6 +79,9 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.28px;
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover, 
@@ -118,6 +121,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item:nth-child(1) > .heading-link:hover, .heading-link:focus {
@@ -138,12 +144,18 @@
     width: 16px;
     height: 12px;
     fill: var(--paragraph-color);
+    transition: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item:nth-child(2) > .heading-link > .header-icon {
     width: 10px;
     height: 16px;
     fill: var(--paragraph-color);
+    transition: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ===== Підвал ===== */
 .footer {
@@ -202,6 +214,9 @@
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.42px;
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-location:hover, 
@@ -218,6 +233,9 @@
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.42px;
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover, 
@@ -255,6 +273,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ft-social-link:hover,
@@ -298,12 +319,15 @@
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: 0.48px;
+    transition: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-field:hover,
 .subscribe-field:focus {
-    border: none;
-    outline: 1px solid var(--button-color);
+    border: 1px solid var(--button-color);
+    outline: none;
 }
 
 .subscribe-button {
@@ -321,6 +345,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button:hover,
