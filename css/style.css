@@ -22,6 +22,8 @@
 
 .body {
     font-family: "Roboto";
+    margin: 0;
+    padding-top: 80px;
 }
 /* ===== Контейнер ===== */
 .container {
@@ -38,6 +40,12 @@
     padding-top: 24px;
     padding-bottom: 25px;
     border-bottom: 1px var(--header-color) solid;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 80px;
+    z-index: 100;
 }
 
 .heading {
@@ -71,6 +79,8 @@
 .nav-list {
     display: flex;
     gap: 50px;
+    position: absolute;
+    top: 9px;
 }
 
 .nav-link {
@@ -89,20 +99,46 @@
     color: var(--button-color);
 }
 
+.nav-list > .nav-item:nth-child(n+2) > .nav-link::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--button-color);
+    border-radius: 2px;
+    display: block;
+    margin-top: 31px;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list > .nav-item:nth-child(n+2) > .nav-link:hover::after,
+.nav-list > .nav-item:nth-child(n+2) > .nav-link:focus::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
 .active {
     color: var(--button-color);
 }
 
 .active::after {
     content: "";
-    width: 48px;
+    width: 100%;
     height: 4px;
-    background-color: #2196F3;
+    background-color: var(--button-color);
     border-radius: 2px;
     display: block;
     margin-top: 31px;
-    position: absolute;
-    left: 251px;
+    opacity: 1;
+    /* position: absolute;
+    left: 0px; */
+}
+
+.active:hover::after {
+    opacity: 1;
 }
 /* ===== Пошта та телефон ===== */
 .header-list {
