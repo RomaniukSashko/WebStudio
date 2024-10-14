@@ -269,17 +269,15 @@
 .projects-item:hover, 
 .projects-item:focus {
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
-    /* transform: translateY(0); */
     .image-text {
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
 .projects-overlay {
     position: relative;
-/*   
-    transform: translatey(100%);
-    transition: transform 250ms ease-in-out; */
+    overflow: hidden;
 }
 
 .projects-image {
@@ -299,11 +297,13 @@
     letter-spacing: 0.54px;
     position: absolute;
     top: 0;
+    left: 0;
+    overflow: hidden;
     opacity: 0;
-    transition: opacity;
+    transition: opacity transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* transform: translateY(-100%); */
+    transform: translateY(100%);
 }
 
 .project-text {
