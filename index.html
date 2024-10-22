@@ -8,6 +8,8 @@
     <link rel="website icon" type="image/png" href="./images/icon1.png">
     <!-- Нормалізація -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Анімація -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Шрифти -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,7 +129,7 @@
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
-            <li class="team-item">
+            <li class="team-item" data-aos="flip-left">
               <img src="./images/igor.jpg" alt="Ігор" class="team-image">
               <div class="team-text">
                 <h3 class="team-name">Ігор Дем'яненко</h3>
@@ -164,7 +166,7 @@
                 </li>
               </ul>
             </li>
-            <li class="team-item">
+            <li class="team-item" data-aos="flip-left">
               <img src="./images/olga.jpg" alt="Ольга" class="team-image">
               <div class="team-text">
                 <h3 class="team-name">Ольга Рєпіна</h3>
@@ -201,7 +203,7 @@
                 </li>
               </ul>
             </li>
-            <li class="team-item">
+            <li class="team-item" data-aos="flip-right">
               <img src="./images/mykola.jpg" alt="Микола" class="team-image">
               <div class="team-text">
                 <h3 class="team-name">Микола Тарасов</h3>
@@ -238,7 +240,7 @@
                 </li>
               </ul>
             </li>
-            <li class="team-item">
+            <li class="team-item" data-aos="flip-right">
               <img src="./images/mykhailo.jpg" alt="Михайло" class="team-image" >
               <div class="team-text">
                 <h3 class="team-name">Михайло Єрмаков</h3>
@@ -440,5 +442,9 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
