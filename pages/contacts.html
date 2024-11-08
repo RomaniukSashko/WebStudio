@@ -8,6 +8,8 @@
     <link rel="website icon" type="image/png" href="../images/icon1.png">
     <!-- Нормалізація -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Анімація -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Шрифти -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -58,8 +60,8 @@
       <section class="contacts">
         <div class="container">
           <div class="contacts__flex">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.779267829435!2d30.535810875246252!3d50.426584089083626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x57a4dffefec77da0!2z0LHRg9C70YzQstCw0YAg0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgMjYsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1730820969132!5m2!1suk!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="contacts__map"></iframe>
-            <div class="contacts__info">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.779267829435!2d30.535810875246252!3d50.426584089083626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x57a4dffefec77da0!2z0LHRg9C70YzQstCw0YAg0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgMjYsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1730820969132!5m2!1suk!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="contacts__map" data-aos="flip-left" data-aos-delay="1000"></iframe>
+            <div class="contacts__info" data-aos="flip-right">
               <h2 class="contacts__title">Зв'язок з нами:</h2>
               <ul class="contacts__list">
                 <li class="contacts__item">
@@ -152,5 +154,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
