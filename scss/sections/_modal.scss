@@ -1,0 +1,213 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $backdrop-bcg;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition-property: opacity transform;
+    transition-duration: 2500ms;
+    transition-timing-function: $cubic-bezier;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+    position: absolute;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+    background: $header-title;
+    box-shadow: $team-card-shadow;
+    padding: 40px;
+    transition-property: opacity transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(1);
+
+    &__title {
+        color: $title-color;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: 0.6px;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        color: $paragraph-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.12px;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    &__row {
+        position: relative;
+    }
+
+    &__field {
+        width: 448px;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid $modal-border;
+        margin-bottom: 10px;
+        padding-left: 42px;
+        padding-right: 12px;
+        transition: border;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border: 1px solid $button-color;
+        }
+    }
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 12px;
+        left: 11px;
+        transition: fill;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+    }
+
+    &__field:hover + &__icon,
+    &__field:focus + &__icon {
+        fill: $button-color;
+    }
+
+    &__comment {
+        resize: none;
+        width: 448px;
+        height: 120px;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        color: $comment-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.12px;
+        border-radius: 4px;
+        border: 1px solid $modal-border;
+        transition: border;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border: 1px solid $button-color;
+        }
+    }
+
+    &__check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__checkbox {
+        margin-right: 7px;
+        width: 16px;
+        height: 15px;
+        border: 1px solid $title-color;
+    }
+
+    &__agree {
+        margin-right: 5px;
+        color: $paragraph-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.71;
+        letter-spacing: 0.42px;
+    }
+
+    &__conditions {
+        color: $button-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.71;
+        letter-spacing: 0.42px;
+        text-decoration-line: underline;
+    }
+
+    &__button {
+        padding: 10px 52px;
+        border-radius: 4px;
+        border: none;
+        background: $button-color;
+        box-shadow: $subsribe-shadow;
+        color: $header-title;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: 0.96px;
+        margin-left: 124px;
+        margin-right: 124px;
+        transition: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+
+        &:hover,
+        &:focus {
+            background-color: $active-button;
+            outline: none;
+        }
+    }
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $modal-close-border;
+        border-radius: 50%;
+        background-color: $header-title;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__icon {
+            width: 18px;
+            height: 18px;
+            transition: fill;
+            transition-duration: 250ms;
+            transition-timing-function: $cubic-bezier;
+        }
+    }
+
+    &__close:hover,
+    &__close:focus {
+        .modal-close-icon {
+            fill: $button-color;
+        }
+    }
+}
+
+
+
+
+

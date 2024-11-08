@@ -1,0 +1,56 @@
+// Секція Клієнти
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        color: $title-color;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.17;
+        letter-spacing: 1.08px;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__link {
+        width: 170px;
+        height: 92px;
+        border: 1px solid $icon-color;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 32px;
+        transition: border;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border: 1px solid $button-color;
+            .clients__icon {
+                fill: $button-color;
+            }
+        }
+    }
+
+    &__icon {
+        width: 106px;
+        height: 60px;
+        flex-shrink: 0;
+        fill: $icon-color;
+        padding: 9px 11px;
+        transition: fill;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+    }
+}

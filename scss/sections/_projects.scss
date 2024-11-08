@@ -1,0 +1,129 @@
+/* ===== Секція ===== */
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        border: 1px solid $card-border;
+        background: $header-title;
+        flex-basis: calc((100% - 60px) / 3);
+        transition: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+
+        &:hover, 
+        &:focus {
+            box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+            .projects__description {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__overlay {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__description {
+        width: 100%;
+        height: 100%;
+        padding: 63px 24px;
+        background-color: $portfolio-bcg;
+        color: $header-title;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.56;
+        letter-spacing: 0.54px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity transform;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+        transform: translateY(100%);
+    }
+
+    &__text {
+        padding: 20px 24px;
+    }
+
+    &__name {
+        color: $title-color;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 1.08px;
+        margin-bottom: 4px;
+    }
+
+    &__type {
+        color: $paragraph-color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.88;
+        letter-spacing: 0.48px;
+    }
+}
+/* ===== Список Кнопок ===== */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+
+    &__button {
+        border: none;
+        border-radius: 4px;
+        background: $our-command-background;
+        color: $title-color;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.63;
+        letter-spacing: 0.48px;
+        padding: 6px 25px;
+        transition: color, background-color, box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+
+        &:hover, 
+        &:focus {
+            background-color: $button-color;
+            color: $header-title;
+            box-shadow: $portfolio-btn-shadow;
+            outline: none;
+        }
+    }
+}
+
+/* ===== Список Проєктів ===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+// Секція Герой
+.hero {
+    background-image: linear-gradient($hero-gradient, $hero-gradient), url(../images/backgroundimagehero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    &__dad {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        color: $header-title;
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 1.36;
+        letter-spacing: 2.64px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        width: 696px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__button {
+        padding: 10px 32px;
+        border: none;
+        border-radius: 4px;
+        background: $button-color;
+        color: $header-title;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: 0.96px;
+        box-shadow: $hero-btn-shadow;
+        transition: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: $cubic-bezier;
+        animation-name: hero-button;
+        animation-duration: 8000ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        &:hover,
+        &:focus {
+            background-color: $active-button;
+            outline: none;
+        }
+    }
+}
+
+// Анімація
+
+@keyframes hero-button {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.25);
+    }
+
+    40% {
+        transform: scale(0.75);
+    }
+
+    60% {
+        transform: scale(1.25);
+    }
+
+    80% {
+        transform: scale(0.75);
+    }
+
+    100% {
+        transform: scale(1.25);
+    }
+}
