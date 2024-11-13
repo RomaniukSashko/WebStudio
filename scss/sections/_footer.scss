@@ -13,21 +13,13 @@
     margin-right: 70px;
 
     &__link {
-        color: $header-title;
         font-family: $raleway-font;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.39;
-        letter-spacing: 0.78px;
+        @include font($color:$header-title, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
     }
 
     &__logo {
-        color: $button-color;
         font-family: $raleway-font;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.39;
-        letter-spacing: 0.78px;
+        @include font($color:$button-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
     }
 }
 
@@ -43,14 +35,8 @@
         width: 231px;
         height: 21px;
         flex-shrink: 0;
-        color: $header-title;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
-        letter-spacing: 0.42px;
-        transition: color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include font($color:$header-title);
+        @include transition();
 
         &:hover, 
         &:focus {
@@ -68,14 +54,8 @@
         width: 136px;
         height: 21px;
         flex-shrink: 0;
-        color: $address-color;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
-        letter-spacing: 0.42px;
-        transition: color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include font($color:$address-color);
+        @include transition();
         
         &:hover, 
         &:focus {
@@ -90,19 +70,13 @@
     margin-right: 94px;
 
     &__title {
-        color: $header-title;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.14;
-        letter-spacing: 0.42px;
+        @include font($color:$header-title, $weight:700, $height:1.14);
         margin-top: 12px;
         margin-bottom: 20px;
     }
 
     &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-base;
         gap: 10px;
     }
 
@@ -111,12 +85,8 @@
         height: 44px;
         background-color: $social-bcg;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @extend %flex-base;
+        @include transition($name-transition:background-color);
 
         &:hover,
         &:focus {
@@ -137,11 +107,7 @@
 .ft__subscribe {
 
     &__title {
-        color: $header-title;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.14;
-        letter-spacing: 0.42px;
+        @include font($color:$header-title, $weight:700, $height:1.14);
         margin-top: 12px;
         margin-bottom: 20px;
     }
@@ -159,14 +125,8 @@
         background: $subsribe-input;
         box-shadow: $subsribe-shadow;
         padding: 15px 16px;
-        color: $address-color;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.25;
-        letter-spacing: 0.48px;
-        transition: border;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include font($color:$address-color, $size:16px, $height:1.25, $letter-space:0.48px);
+        @include transition($name-transition:border);
 
         &:hover,
         &:focus {
@@ -181,18 +141,11 @@
         border-radius: 4px;
         background: $button-color;
         box-shadow: $subsribe-shadow;
-        color: $header-title;
         text-align: center;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.88;
-        letter-spacing: 0.96px;
-        display: flex;
-        align-items: center;
+        @include font($color:$header-title, $size:16px, $weight:700, $height:1.88, $letter-space:0.96px);
+        @extend %flex-base;
         gap: 10px;
-        transition: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:background-color);
 
         &:hover,
         &:focus {
@@ -207,15 +160,3 @@
         fill: $header-title;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

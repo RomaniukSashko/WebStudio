@@ -13,9 +13,7 @@
         border: 1px solid $card-border;
         background: $header-title;
         flex-basis: calc((100% - 60px) / 3);
-        transition: box-shadow;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:box-shadow);
 
         &:hover, 
         &:focus {
@@ -42,19 +40,13 @@
         height: 100%;
         padding: 63px 24px;
         background-color: $portfolio-bcg;
-        color: $header-title;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.56;
-        letter-spacing: 0.54px;
+        @include font($color:$header-title, $size:18px, $height:1.56, $letter-space:0.54px);
         position: absolute;
         top: 0;
         left: 0;
         overflow: hidden;
         opacity: 0;
-        transition: opacity transform;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:opacity transform);
         transform: translateY(100%);
     }
 
@@ -63,26 +55,17 @@
     }
 
     &__name {
-        color: $title-color;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 2;
-        letter-spacing: 1.08px;
+        @include font($color:$title-color, $size:18px, $weight:700, $height:2, $letter-space:1.08px);
         margin-bottom: 4px;
     }
 
     &__type {
-        color: $paragraph-color;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.88;
-        letter-spacing: 0.48px;
+        @include font($size:16px, $height:1.88, $letter-space:0.48px);
     }
 }
 /* ===== Список Кнопок ===== */
 .options {
-    display: flex;
-    justify-content: center;
+    @extend %flex-base;
     gap: 8px;
     margin-bottom: 50px;
 
@@ -90,15 +73,9 @@
         border: none;
         border-radius: 4px;
         background: $our-command-background;
-        color: $title-color;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.63;
-        letter-spacing: 0.48px;
+        @include font($color:$title-color, $size:16px, $weight:500, $height:1.63, $letter-space:0.48px);
         padding: 6px 25px;
-        transition: color, background-color, box-shadow;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:color background-color box-shadow);
 
         &:hover, 
         &:focus {
@@ -109,21 +86,3 @@
         }
     }
 }
-
-/* ===== Список Проєктів ===== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

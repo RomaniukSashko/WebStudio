@@ -6,17 +6,12 @@
     text-align: center;
 
     &__title {
-        color: $title-color;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.17;
-        letter-spacing: 1.08px;
+        @include font($color:$title-color, $size:36px, $weight:700, $height:1.17, $letter-space:1.08px);
         margin-bottom: 50px;
     }
 
     &__list {
-        display: flex;
-        justify-content: center;
+        @extend %flex-base;
         gap: 30px;
     }
 
@@ -28,9 +23,7 @@
         width: 370px;
         height: 70px;
         background: $image-bcg;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-base;
         position: absolute;
         bottom: 0;
         animation-name: occupation-animation;
@@ -40,12 +33,8 @@
     }
 
     &__text {
-        color: $header-title;
         text-align: center;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.14;
-        letter-spacing: 0.42px;
+        @include font($color:$header-title, $weight:700, $height:1.14);
         text-transform: uppercase;
     }
 }

@@ -1,7 +1,12 @@
+// Базове
 @import "./base/reset";
-@import "./utils/variables";
 @import "./base/container";
 @import "./base/common";
+// Утиліти
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./utils/placeholder";
+// Секції
 @import "./sections/header";
 @import "./sections/hero";
 @import "./sections/features";

@@ -13,27 +13,18 @@
     z-index: 100;
 
     &__flex {
-        display: flex;
-        align-items: center;
+        @extend %flex-base;
         position: relative;
     }
 
     &__link {
-        color: $logo-color;
         font-family: $raleway-font;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.39;
-        letter-spacing: 0.78px;
+        @include font($color:$logo-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
     }
 
     &__logo {
-        color: $button-color;
         font-family: $raleway-font;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.39;
-        letter-spacing: 0.78px;
+        @include font($color:$button-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
     }
 
     /* ===== Пошта та телефон ===== */
@@ -45,18 +36,10 @@
     }
 
     &__connection {
-        color: $paragraph-color;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.14;
-        letter-spacing: 0.28px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include font($weight:500, $height:1.14, $letter-space:0.28px);
+        @extend %flex-base;
         gap: 10px;
-        transition: color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition();
     }
 
     &__item:nth-child(1) > &__connection:hover, 
@@ -79,18 +62,14 @@
         width: 16px;
         height: 12px;
         fill: $paragraph-color;
-        transition: fill;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:fill);
     }
 
     &__item:nth-child(2) > &__connection > &__icon {
         width: 10px;
         height: 16px;
         fill: $paragraph-color;
-        transition: fill;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:fill);
     }
 }
 
@@ -107,18 +86,12 @@
     }
 
     &__link {
-        color: $title-color;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.14;
-        letter-spacing: 0.28px;
-        transition: color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include font($color:$title-color, $weight:500, $height:1.14, $letter-space:0.28px);
+        @include transition();
 
         &:hover, 
         &:focus {
-        color: $button-color;
+            color: $button-color;
         }
     }
 
@@ -132,26 +105,20 @@
         margin-top: 31px;
         opacity: 0;
         transform: scale(0);
-        transition: transform;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:transform);
     }
 
     &__link:hover::after,
     &__link:focus::after {
-    opacity: 1;
-    transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
 /* ===== Активна сторінка ===== */
 
 .active {
-    color: $button-color;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.28px;
+    @include font($color:$button-color, $weight:500, $height:1.14, $letter-space:0.28px);
 
     &::after {
         content: "";

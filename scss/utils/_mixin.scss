@@ -1,0 +1,13 @@
+@mixin transition($name-transition:color) {
+    transition: $name-transition;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic-bezier;
+}
+
+@mixin font($color:$paragraph-color, $size:14px, $weight:400, $height:1.71, $letter-space:0.42px) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $letter-space;
+}

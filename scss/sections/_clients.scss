@@ -4,19 +4,13 @@
     padding-bottom: 94px;
 
     &__title {
-        color: $title-color;
+        @include font($color:$title-color, $size:36px, $weight:700, $height:1.17, $letter-space:1.08px);
         text-align: center;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.17;
-        letter-spacing: 1.08px;
         margin-bottom: 50px;
     }
 
     &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-base;
         gap: 30px;
     }
 
@@ -25,13 +19,9 @@
         height: 92px;
         border: 1px solid $icon-color;
         border-radius: 4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-base;
         padding: 16px 32px;
-        transition: border;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:border);
 
         &:hover,
         &:focus {
@@ -49,8 +39,6 @@
         flex-shrink: 0;
         fill: $icon-color;
         padding: 9px 11px;
-        transition: fill;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:fill);
     }
 }

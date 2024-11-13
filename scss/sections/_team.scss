@@ -6,17 +6,12 @@
     text-align: center;
 
     &__title {
-        color: $title-color;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.17;
-        letter-spacing: 1.08px;
+        @include font($color:$title-color, $size:36px, $weight:700, $height:1.17, $letter-space:1.08px);
         margin-bottom: 50px;
     }
 
     &__list {
-        display: flex;
-        justify-content: center;
+        @extend %flex-base;
         gap: 30px;
     }
 
@@ -38,19 +33,11 @@
     }
 
     &__name {
-        color: $title-color;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.19;
-        letter-spacing: 0.48px;
+        @include font($color:$title-color, $size:16px, $weight:500, $height:1.19, $letter-space:0.48px);
     }
 
     &__speciality {
-        color: $paragraph-color;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.19;
-        letter-spacing: 0.48px;
+        @include font($size:16px, $height:1.19, $letter-space:0.48px);
         margin-top: 10px;
     }
 }
@@ -58,8 +45,7 @@
 // Іконки
 
 .social {
-    display: flex;
-    justify-content: center;
+    @extend %flex-base;
     gap: 10px;
     margin-bottom: 30px;
 
@@ -67,12 +53,8 @@
         width: 44px;
         height: 44px;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @extend %flex-base;
+        @include transition($name-transition:background-color);
 
         &:hover,
         &:focus {
@@ -90,7 +72,6 @@
         flex-shrink: 0;
         fill: $icon-color;
         transition: fill;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:fill);
     }
 }

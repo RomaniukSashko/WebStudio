@@ -6,9 +6,7 @@
     width: 100%;
     height: 100%;
     z-index: 100;
-    transition-property: opacity transform;
-    transition-duration: 2500ms;
-    transition-timing-function: $cubic-bezier;
+    @include transition($name-transition:opacity transform);
 }
 
 .is-hidden {
@@ -32,28 +30,17 @@
     background: $header-title;
     box-shadow: $team-card-shadow;
     padding: 40px;
-    transition-property: opacity transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition($name-transition:opacity transform);
     transform: translate(-50%, -50%) scale(1);
 
     &__title {
-        color: $title-color;
         text-align: center;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.15;
-        letter-spacing: 0.6px;
+        @include font($color:$title-color, $size:20px, $weight:700, $height:1.15, $letter-space:0.6px);
         margin-bottom: 12px;
     }
 
     &__text {
-        color: $paragraph-color;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 1.17;
-        letter-spacing: 0.12px;
-        display: block;
+        @include font($size:12px, $height:1.17, $letter-space:0.12px);
         margin-bottom: 4px;
     }
 
@@ -69,9 +56,7 @@
         margin-bottom: 10px;
         padding-left: 42px;
         padding-right: 12px;
-        transition: border;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:border);
 
         &:hover,
         &:focus {
@@ -86,9 +71,7 @@
         position: absolute;
         top: 12px;
         left: 11px;
-        transition: fill;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:fill);
     }
 
     &__field:hover + &__icon,
@@ -102,16 +85,10 @@
         height: 120px;
         padding: 12px 16px;
         margin-bottom: 20px;
-        color: $comment-color;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 1.17;
-        letter-spacing: 0.12px;
+        @include font($color:$comment-color, $size:12px, $height:1.17, $letter-space:0.12px);
         border-radius: 4px;
         border: 1px solid $modal-border;
-        transition: border;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:border);
 
         &:hover,
         &:focus {
@@ -121,9 +98,7 @@
     }
 
     &__check {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-base;
         margin-bottom: 30px;
     }
 
@@ -136,19 +111,11 @@
 
     &__agree {
         margin-right: 5px;
-        color: $paragraph-color;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
-        letter-spacing: 0.42px;
+        @include font();
     }
 
     &__conditions {
-        color: $button-color;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
-        letter-spacing: 0.42px;
+        @include font($color:$button-color);
         text-decoration-line: underline;
     }
 
@@ -158,17 +125,11 @@
         border: none;
         background: $button-color;
         box-shadow: $subsribe-shadow;
-        color: $header-title;
         text-align: center;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.88;
-        letter-spacing: 0.96px;
+        @include font($color:$header-title, $size:16px, $weight:700, $height:1.88, $letter-space:0.96px);
         margin-left: 124px;
         margin-right: 124px;
-        transition: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: $cubic-bezier;
+        @include transition($name-transition:background-color);
 
         &:hover,
         &:focus {
@@ -186,28 +147,19 @@
         position: absolute;
         top: 8px;
         right: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-base;
+
+        &:hover,
+        &:focus {
+            .modal-close-icon {
+                fill: $button-color;
+            }
+        }
 
         &__icon {
             width: 18px;
             height: 18px;
-            transition: fill;
-            transition-duration: 250ms;
-            transition-timing-function: $cubic-bezier;
-        }
-    }
-
-    &__close:hover,
-    &__close:focus {
-        .modal-close-icon {
-            fill: $button-color;
+            @include transition($name-transition:fill);
         }
     }
 }
-
-
-
-
-
