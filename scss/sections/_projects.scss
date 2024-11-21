@@ -65,7 +65,7 @@
 }
 /* ===== Список Кнопок ===== */
 .options {
-    @extend %flex-base;
+    @include flex();
     gap: 8px;
     margin-bottom: 50px;
 

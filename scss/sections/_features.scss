@@ -1,17 +1,23 @@
 // Секція Особливості
 .features {
     background-color: $header-title;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 
     &__list {
         display: flex;
         gap: 30px;
+        flex-wrap: wrap;
     }
 
     &__item:nth-child(1)::before {
         content: "";
-        width: 270px;
+        width: 450px;
         height: 120px;
         background-color: $our-command-background;
         border-radius: 4px;
@@ -21,11 +27,21 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70px 70px;
+
+        @media screen and (min-width: 768px) {
+            width: 354px;
+            height: 120px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+            height: 120px;
+        }
     }
 
     &__item:nth-child(2)::before {
         content: "";
-        width: 270px;
+        width: 450px;
         height: 120px;
         background-color: $our-command-background;
         border-radius: 4px;
@@ -35,11 +51,21 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70px 70px;
+
+        @media screen and (min-width: 768px) {
+            width: 354px;
+            height: 120px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+            height: 120px;
+        }
     }
 
     &__item:nth-child(3)::before {
         content: "";
-        width: 270px;
+        width: 450px;
         height: 120px;
         background-color: $our-command-background;
         border-radius: 4px;
@@ -49,11 +75,21 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70px 70px;
+
+        @media screen and (min-width: 768px) {
+            width: 354px;
+            height: 120px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+            height: 120px;
+        }
     }
 
     &__item:nth-child(4)::before {
         content: "";
-        width: 270px;
+        width: 450px;
         height: 120px;
         background-color: $our-command-background;
         border-radius: 4px;
@@ -63,19 +99,43 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70px 70px;
+
+        @media screen and (min-width: 768px) {
+            width: 354px;
+            height: 120px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+            height: 120px;
+        }
     }
 
     &__subtitle {
-        width: 270px;
         @include font($color:$title-color, $weight:700, $height:1.14);
         text-transform: uppercase;
         margin-bottom: 10px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            text-align: start;
+        }
     }
 
     &__text {
-        width: 270px;
-        height: 72px;
+        width: 450px;
+        height: 50px;
         flex-shrink: 0;
         @include font();
+
+        @media screen and (min-width: 768px) {
+            width: 354px;
+            height: 48px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+            height: 72px;
+        }
     }
 }

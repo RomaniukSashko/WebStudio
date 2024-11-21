@@ -2,34 +2,69 @@
     background-color: $footer-background;
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
 
     &__flex{
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 0;
+        }
     }
 }
 
 /* ===== Адреса ===== */
 .ft__address {
-    margin-right: 70px;
+    margin-left: 0;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 165px;
+        margin-left: 61px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+        margin-left: 0;
+    }
 
     &__link {
-        font-family: $raleway-font;
-        @include font($color:$header-title, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
+        @include font($color:$header-title, $size:24px, $weight:700, $height:1.375, $letter-space:0.72px, $family: $raleway-font);
+    
+        @media screen and (min-width: 1200px) {
+            @include font($color:$header-title, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px, $family: $raleway-font);
+        }
     }
 
     &__logo {
-        font-family: $raleway-font;
-        @include font($color:$button-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
+        @include font($color:$button-color, $size:24px, $weight:700, $height:1.375, $letter-space:0.72px, $family: $raleway-font);
+
+        @media screen and (min-width: 1200px) {
+            @include font($color:$button-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px, $family: $raleway-font);
+        }
     }
 }
 
 .connect {
     width: 231px;
-    height: 81px;
+    height: 79px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 8px;
+
+    @media screen and (min-width: 1200px) {
+        height: 81px;
+        gap: 9px;
+    }
 
     &__location {
         width: 231px;
@@ -67,7 +102,10 @@
 /* ===== Соцмережі ===== */
 
 .ft__social {
-    margin-right: 94px;
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 94px;
+    }
 
     &__title {
         @include font($color:$header-title, $weight:700, $height:1.14);
@@ -76,7 +114,7 @@
     }
 
     &__list {
-        @extend %flex-base;
+        @include flex();
         gap: 10px;
     }
 
@@ -85,7 +123,7 @@
         height: 44px;
         background-color: $social-bcg;
         border-radius: 50%;
-        @extend %flex-base;
+        @include flex();
         @include transition($name-transition:background-color);
 
         &:hover,
@@ -105,6 +143,17 @@
 /* ===== Підписка ===== */
 
 .ft__subscribe {
+    margin-left: 0;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 151px;
+        margin-top: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 0;
+        margin-top: 0;
+    }
 
     &__title {
         @include font($color:$header-title, $weight:700, $height:1.14);
@@ -114,11 +163,19 @@
 
     &__form {
         display: flex;
-        gap: 12px;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (min-width: 1200px) {
+            gap: 12px;
+            flex-direction: row;
+        }
     }
 
     &__field {
-        width: 358px;
+        width: 450px;
         height: 50px;
         border-radius: 4px;
         border: 1px solid $subsribe-border;
@@ -127,6 +184,10 @@
         padding: 15px 16px;
         @include font($color:$address-color, $size:16px, $height:1.25, $letter-space:0.48px);
         @include transition($name-transition:border);
+
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+        }
 
         &:hover,
         &:focus {
@@ -143,9 +204,11 @@
         box-shadow: $subsribe-shadow;
         text-align: center;
         @include font($color:$header-title, $size:16px, $weight:700, $height:1.88, $letter-space:0.96px);
-        @extend %flex-base;
+        @include flex();
         gap: 10px;
         @include transition($name-transition:background-color);
+        margin-left: auto;
+        margin-right: auto;
 
         &:hover,
         &:focus {

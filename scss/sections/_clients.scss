@@ -1,27 +1,48 @@
 // Секція Клієнти
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 
     &__title {
         @include font($color:$title-color, $size:36px, $weight:700, $height:1.17, $letter-space:1.08px);
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
     }
 
     &__list {
-        @extend %flex-base;
+        @include flex();
         gap: 30px;
+        flex-wrap: wrap;
     }
 
     &__link {
-        width: 170px;
+        width: 210px;
         height: 92px;
         border: 1px solid $icon-color;
         border-radius: 4px;
-        @extend %flex-base;
-        padding: 16px 32px;
+        padding: 16px 52px;
+        @include flex();
+
         @include transition($name-transition:border);
+
+        @media screen and (min-width: 768px) {
+            width: 226px;
+            padding: 16px 60px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+            padding: 16px 32px;
+        }
 
         &:hover,
         &:focus {
@@ -38,7 +59,11 @@
         height: 60px;
         flex-shrink: 0;
         fill: $icon-color;
-        padding: 9px 11px;
+        padding: 9px 13px;
         @include transition($name-transition:fill);
+
+        @media screen and (min-width: 1200px) {
+            padding: 9px 11px;
+        }
     }
 }

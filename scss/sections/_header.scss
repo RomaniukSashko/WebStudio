@@ -2,8 +2,7 @@
 
 .header {
     background-color: $header-title;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 16px 0;
     border-bottom: 1px $header-color solid;
     position: fixed;
     width: 100%;
@@ -12,34 +11,82 @@
     min-height: 80px;
     z-index: 100;
 
+    @media screen and (min-width: 768px) {
+        padding: 26px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 24px 0 25px 0;
+    }
+
     &__flex {
-        @extend %flex-base;
+        @include flex($justify: normal);
         position: relative;
     }
 
     &__link {
-        font-family: $raleway-font;
-        @include font($color:$logo-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
+        @include font($color:$logo-color, $size:24px, $weight:700, $height:1.375, $letter-space:0.72px, $family: $raleway-font);
+
+        // @media screen and (min-width: 768px){
+            
+        // }
+
+        // @media screen and (min-width: 1200px) {
+            
+        // }
+
+        @media screen and (min-width: 768px){
+            @include font($color:$logo-color, $size:24px, $weight:700, $height:1.375, $letter-space:0.72px, $family: $raleway-font);
+        }
+
+        @media screen and (min-width: 1200px) {
+            @include font($color:$logo-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px, $family: $raleway-font);
+        }
     }
 
     &__logo {
-        font-family: $raleway-font;
-        @include font($color:$button-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px);
+        @include font($color:$button-color, $size:24px, $weight:700, $height:1.375, $letter-space:0.72px, $family: $raleway-font);
+
+        @media screen and (min-width: 768px) {
+            @include font($color:$button-color, $size:24px, $weight:700, $height:1.375, $letter-space:0.72px, $family: $raleway-font);
+        }
+
+        @media screen and (min-width: 1200px) {
+            @include font($color:$button-color, $size:26px, $weight:700, $height:1.39, $letter-space:0.78px, $family: $raleway-font);
+        }
     }
 
     /* ===== Пошта та телефон ===== */
 
     &__list {
-        display: flex;
-        gap: 30px;
+        display: none;
         margin-left: auto;
+
+        @media screen and (min-width: 768px){
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            gap: 30px;
+        }
+
     }
 
     &__connection {
-        @include font($weight:500, $height:1.14, $letter-space:0.28px);
-        @extend %flex-base;
+        @include flex($justify: normal);
         gap: 10px;
         @include transition();
+
+        @media screen and (min-width: 768px){
+            @include font($size: 12px, $weight:500, $height:1.17, $letter-space:0.24px);
+        }
+
+        @media screen and (min-width: 1200px) {
+            @include font($weight:500, $height:1.14, $letter-space:0.28px);
+        }
     }
 
     &__item:nth-child(1) > &__connection:hover, 
@@ -59,24 +106,44 @@
     }
 
     &__item:nth-child(1) > &__connection > &__icon {
-        width: 16px;
-        height: 12px;
         fill: $paragraph-color;
         @include transition($name-transition:fill);
+        width: 14px;
+        height: 10px;
+
+        @media screen and (min-width: 1200px) {
+            width: 16px;
+            height: 12px;
+        }
     }
 
     &__item:nth-child(2) > &__connection > &__icon {
-        width: 10px;
-        height: 16px;
         fill: $paragraph-color;
         @include transition($name-transition:fill);
+        width: 10px;
+        height: 14px;
+
+        @media screen and (min-width: 1200px) {
+            width: 10px;
+            height: 16px;
+        }
     }
 }
 
 /* ===== Навігація ===== */
 
 .nav {
-    margin-left: 93px;
+    display: none;
+
+    @media screen and (min-width: 768px){
+        display: block;
+        margin-left: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
+    
 
     &__list {
         display: flex;
@@ -130,4 +197,4 @@
         margin-top: 31px;
         opacity: 1;
     }
-}
+} 

@@ -4,26 +4,36 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 
     &__dad {
-        @extend %flex-base;
+        @include flex();
         flex-direction: column;
     }
 
     &__title {
-        @include font($color:$header-title, $size:44px, $weight:900, $height:1.36, $letter-space:2.64px);
+        @include font($color:$header-title, $size:26px, $weight:900, $height:1.61, $letter-space:1.56px);
         text-transform: uppercase;
         margin-bottom: 30px;
-        width: 696px;
+        width: 360px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+
+        @media screen and (min-width: 1200px) {
+            @include font($color:$header-title, $size:44px, $weight:900, $height:1.36, $letter-space:2.64px);
+            width: 696px;
+        }
     }
 
     &__button {
-        padding: 10px 32px;
+        padding: 10px 24px;
         border: none;
         border-radius: 4px;
         background: $button-color;
@@ -34,6 +44,14 @@
         animation-duration: 8000ms;
         animation-iteration-count: infinite;
         animation-direction: alternate;
+
+        @media screen and (min-width: 768px) {
+            
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 10px 32px;
+        }
 
         &:hover,
         &:focus {

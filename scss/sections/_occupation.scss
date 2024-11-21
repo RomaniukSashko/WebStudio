@@ -4,6 +4,11 @@
     padding-top: 47px;
     padding-bottom: 94px;
     text-align: center;
+    display: none;
+    
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 
     &__title {
         @include font($color:$title-color, $size:36px, $weight:700, $height:1.17, $letter-space:1.08px);
@@ -11,7 +16,7 @@
     }
 
     &__list {
-        @extend %flex-base;
+        @include flex();
         gap: 30px;
     }
 
@@ -23,7 +28,7 @@
         width: 370px;
         height: 70px;
         background: $image-bcg;
-        @extend %flex-base;
+        @include flex();
         position: absolute;
         bottom: 0;
         animation-name: occupation-animation;

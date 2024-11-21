@@ -4,10 +4,17 @@
     transition-timing-function: $cubic-bezier;
 }
 
-@mixin font($color:$paragraph-color, $size:14px, $weight:400, $height:1.71, $letter-space:0.42px) {
+@mixin font($color:$paragraph-color, $size:14px, $weight:400, $height:1.71, $letter-space:0.42px, $family:$roboto-font) {
+    font-family: $family;
     color: $color;
     font-size: $size;
     font-weight: $weight;
     line-height: $height;
     letter-spacing: $letter-space;
+}
+
+@mixin flex($justify:center, $align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
 }
