@@ -4,8 +4,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    min-width: 320px;
     padding-top: 118px;
     padding-bottom: 118px;
+    text-align: center;
+    overflow: hidden;
 
     @media screen and (min-width: 1200px) {
         padding-top: 200px;
@@ -13,18 +16,22 @@
     }
 
     &__dad {
-        @include flex();
+        @include flex($justify: normal);
         flex-direction: column;
     }
 
     &__title {
         @include font($color:$header-title, $size:26px, $weight:900, $height:1.61, $letter-space:1.56px);
         text-transform: uppercase;
-        margin-bottom: 30px;
-        width: 360px;
+        margin: 0 auto 30px auto;
+        width: 100%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+
+        @media screen and (min-width: 480px) {
+            width: 360px;
+        }
 
         @media screen and (min-width: 1200px) {
             @include font($color:$header-title, $size:44px, $weight:900, $height:1.36, $letter-space:2.64px);

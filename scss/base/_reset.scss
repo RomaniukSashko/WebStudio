@@ -7,7 +7,7 @@ a {
     font-style: normal;
 }
   
-h1, h2, h3, p, ul, body{
+h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
 }
@@ -16,5 +16,5 @@ img {
     display: block;
     width: 100%;
     height: auto;
-    height: 100%;
+    max-width: 100%;
 }

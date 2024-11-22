@@ -8,20 +8,25 @@
     width: 100%;
     top: 0;
     left: 0;
-    min-height: 80px;
+    min-height: 60px;
     z-index: 100;
 
     @media screen and (min-width: 768px) {
         padding: 26px 0;
+        min-height: 80px;
     }
 
     @media screen and (min-width: 1200px) {
         padding: 24px 0 25px 0;
+        min-height: 80px;
     }
 
     &__flex {
-        @include flex($justify: normal);
         position: relative;
+
+        @media screen and (min-width: 768px) {
+            @include flex($justify: normal);
+        }
     }
 
     &__link {

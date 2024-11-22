@@ -3,6 +3,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
+    
 
     @media screen and (min-width: 1200px) {
         text-align: start;
@@ -18,6 +19,7 @@
         @media screen and (min-width: 768px) {
             flex-direction: row;
             gap: 0;
+            align-items: start;
         }
     }
 }
@@ -109,8 +111,15 @@
 
     &__title {
         @include font($color:$header-title, $weight:700, $height:1.14);
-        margin-top: 12px;
         margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            margin-top: 5px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 12px;
+        }
     }
 
     &__list {
@@ -144,6 +153,14 @@
 
 .ft__subscribe {
     margin-left: 0;
+    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    @media screen and (min-width: 480px) {
+        width: 450px;
+    }
 
     @media screen and (min-width: 768px) {
         margin-left: 151px;
@@ -151,6 +168,7 @@
     }
 
     @media screen and (min-width: 1200px) {
+        width: auto;
         margin-left: 0;
         margin-top: 0;
     }
@@ -162,11 +180,10 @@
     }
 
     &__form {
-        display: flex;
+        @include flex();
         gap: 20px;
         flex-wrap: wrap;
         flex-direction: column;
-        justify-content: center;
 
         @media screen and (min-width: 1200px) {
             gap: 12px;
@@ -175,7 +192,7 @@
     }
 
     &__field {
-        width: 450px;
+        width: 100%;
         height: 50px;
         border-radius: 4px;
         border: 1px solid $subsribe-border;
@@ -184,6 +201,10 @@
         padding: 15px 16px;
         @include font($color:$address-color, $size:16px, $height:1.25, $letter-space:0.48px);
         @include transition($name-transition:border);
+
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
 
         @media screen and (min-width: 1200px) {
             width: 358px;
@@ -207,8 +228,8 @@
         @include flex();
         gap: 10px;
         @include transition($name-transition:background-color);
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
 
         &:hover,
         &:focus {
