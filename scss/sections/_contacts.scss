@@ -1,38 +1,68 @@
 .contacts {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0;
+
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0;
+    }
 
     &__flex {
         display: flex;
+        flex-direction: column;
         gap: 60px;
+
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+        }
     }
 
     &__map {
-        width: 570px;
-        height: 800px;
+        width: 100%;
+        height: 400px;
         border-radius: 10px;
         border: 1px solid $header-color;
+
+        @media screen and (min-width: 1200px) {
+            width: 570px;
+            height: 800px;
+        }
     }
 
     &__info {
-        margin-top: 60px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 60px;
+            text-align: left;
+        }
     }
 
     &__title {
-        @include font($color:$title-color, $size:36px, $weight:700, $height:1.17, $letter-space:1.08px);
+        @include font($color:$title-color, $size:28px, $weight:700, $height:1.18, $letter-space:0.84px);
         margin-bottom: 10px;
+
+        @media screen and (min-width: 1200px) {
+            @include font($color:$title-color, $size:36px, $weight:700, $height:1.17, $letter-space:1.08px);
+        }
     }
 
     &__subtitle {
-        @include font($color:$title-color, $size:24px, $weight:500, $height:1.19, $letter-space:0.48px);
+        @include font($color:$title-color, $size:20px, $weight:500, $height:1.2, $letter-space:0.36px);
         margin-bottom: 10px;
+
+        @media screen and (min-width: 1200px) {
+            @include font($color:$title-color, $size:24px, $weight:500, $height:1.19, $letter-space:0.48px);
+        }
     }
 
     &__link {
-        @include font($weight:500, $height:1.14, $letter-space:0.28px);
+        @include font($weight:500, $height:1.17, $letter-space:0.24px);
         margin-bottom: 10px;
         display: block;
         @include transition();
+
+        @media screen and (min-width: 1200px) {
+            @include font($weight:500, $height:1.14, $letter-space:0.28px);
+        }
 
         &:hover,
         &:focus {

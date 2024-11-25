@@ -812,12 +812,24 @@ img {
   gap: 30px;
   flex-wrap: wrap;
 }
+.clients__item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
 .clients__link {
   width: 100%;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  padding: 16px 52px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -828,6 +840,7 @@ img {
 @media screen and (min-width: 480px) {
   .clients__link {
     width: 210px;
+    padding: 16px 52px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1168,8 +1181,12 @@ img {
 
 /* ===== Секція ===== */
 .projects {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding: 94px 0;
+  }
 }
 .projects__list {
   display: flex;
@@ -1179,10 +1196,20 @@ img {
 .projects__item {
   border: 1px solid #EEEEEE;
   background: #FFFFFF;
-  flex-basis: calc((100% - 60px) / 3);
+  width: 100%;
   transition: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .projects__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .projects__item:hover, .projects__item:focus {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
@@ -1202,7 +1229,7 @@ img {
 .projects__description {
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  padding: 77px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   font-family: "Roboto";
   color: #FFFFFF;
@@ -1219,6 +1246,16 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
+}
+@media screen and (min-width: 768px) {
+  .projects__description {
+    padding: 49px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__description {
+    padding: 63px 24px;
+  }
 }
 .projects__text {
   padding: 20px 24px;
@@ -1244,10 +1281,28 @@ img {
 /* ===== Список Кнопок ===== */
 .options {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-basis: calc((100% - 16px) / 3);
+  max-width: 326px;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-basis: calc((100% - 32px) / 5);
+    max-width: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .options {
+    margin-bottom: 50px;
+  }
 }
 .options__button {
   border: none;
@@ -1259,7 +1314,7 @@ img {
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.48px;
-  padding: 6px 25px;
+  padding: 6px 22px;
   transition: color background-color box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1272,52 +1327,104 @@ img {
 }
 
 .contacts {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    padding: 94px 0;
+  }
 }
 .contacts__flex {
   display: flex;
+  flex-direction: column;
   gap: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .contacts__flex {
+    flex-direction: row;
+  }
+}
 .contacts__map {
-  width: 570px;
-  height: 800px;
+  width: 100%;
+  height: 400px;
   border-radius: 10px;
   border: 1px solid #ECECEC;
 }
+@media screen and (min-width: 1200px) {
+  .contacts__map {
+    width: 570px;
+    height: 800px;
+  }
+}
 .contacts__info {
-  margin-top: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__info {
+    margin-top: 60px;
+    text-align: left;
+  }
 }
 .contacts__title {
   font-family: "Roboto";
   color: #212121;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 1.08px;
+  line-height: 1.18;
+  letter-spacing: 0.84px;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__title {
+    font-family: "Roboto";
+    color: #212121;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+  }
 }
 .contacts__subtitle {
   font-family: "Roboto";
   color: #212121;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.19;
-  letter-spacing: 0.48px;
+  line-height: 1.2;
+  letter-spacing: 0.36px;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__subtitle {
+    font-family: "Roboto";
+    color: #212121;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.19;
+    letter-spacing: 0.48px;
+  }
 }
 .contacts__link {
   font-family: "Roboto";
   color: #757575;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.28px;
+  line-height: 1.17;
+  letter-spacing: 0.24px;
   margin-bottom: 10px;
   display: block;
   transition: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-family: "Roboto";
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+  }
 }
 .contacts__link:hover, .contacts__link:focus {
   color: #2196F3;
