@@ -13,6 +13,7 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    transform: translateY(100%);
 }
 
 .backdrop.is-hidden .modal {
@@ -24,7 +25,7 @@
     position: relative;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 95vw;
     height: auto;
     border-radius: 4px;
     background: $header-title;
@@ -51,6 +52,11 @@
         @media screen and (min-width: 1200px) {
             @include font($color:$title-color, $size:20px, $weight:700, $height:1.15, $letter-space:0.6px);
         }
+    }
+
+    &__form {
+        @include flex($justify:normal);
+        flex-direction: column;
     }
 
     &__text {
@@ -165,18 +171,8 @@
         box-shadow: $subsribe-shadow;
         text-align: center;
         @include font($color:$header-title, $size:16px, $weight:700, $height:1.88, $letter-space:0.96px);
-        margin: 0 20px;
         @include transition($name-transition:background-color);
-        @media screen and (min-width: 480px) {
-            margin-left: 85px;
-            margin-right: 85px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            margin-left: 124px;
-            margin-right: 124px;
-        }
-
+        
         &:hover,
         &:focus {
             background-color: $active-button;

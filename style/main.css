@@ -79,13 +79,9 @@ img {
 }
 .header__flex {
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .header__flex {
-    display: flex;
-    justify-content: normal;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: normal;
+  align-items: center;
 }
 .header__link {
   font-family: "Raleway";
@@ -228,6 +224,21 @@ img {
     width: 10px;
     height: 16px;
   }
+}
+.header__button {
+  border: none;
+  background-color: #FFFFFF;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
+}
+.header__menu {
+  width: 40px;
+  height: 40px;
+  fill: #000000;
 }
 
 /* ===== Навігація ===== */
@@ -1455,6 +1466,7 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transform: translateY(100%);
 }
 
 .backdrop.is-hidden .modal {
@@ -1466,7 +1478,7 @@ img {
   position: relative;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 95vw;
   height: auto;
   border-radius: 4px;
   background: #FFFFFF;
@@ -1508,6 +1520,12 @@ img {
     line-height: 1.15;
     letter-spacing: 0.6px;
   }
+}
+.modal__form {
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-direction: column;
 }
 .modal__text {
   font-family: "Roboto";
@@ -1655,22 +1673,9 @@ img {
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.96px;
-  margin: 0 20px;
   transition: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (min-width: 480px) {
-  .modal__button {
-    margin-left: 85px;
-    margin-right: 85px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal__button {
-    margin-left: 124px;
-    margin-right: 124px;
-  }
 }
 .modal__button:hover, .modal__button:focus {
   background-color: #1d84d8;
@@ -1698,4 +1703,113 @@ img {
   transition: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+}
+
+.menu {
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 48px 40px;
+  transition: transform opacity visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu__button {
+  border: none;
+  background-color: #FFFFFF;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.menu__button:hover .menu__close {
+  fill: #2196F3;
+}
+.menu__close {
+  width: 40px;
+  height: 40px;
+  fill: #212121;
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.list-nav__link {
+  font-family: "Roboto";
+  color: #212121;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.8px;
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list-nav__link:hover {
+  font-family: "Roboto";
+  color: #2196F3;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.8px;
+}
+
+.list-address {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 302px;
+  margin-bottom: 64px;
+}
+.list-address__item:nth-child(1) > .list-address__link {
+  font-family: "Roboto";
+  color: #2196F3;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.68px;
+}
+.list-address__item:nth-child(2) > .list-address__link {
+  font-family: "Roboto";
+  color: #757575;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+}
+
+.list-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.list-social__item:last-child > .list-social__link {
+  padding: 0;
+  border: none;
+}
+.list-social__link {
+  font-family: "Roboto";
+  color: #2196F3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.36px;
+  padding-right: 10px;
+  border-right: 1px rgba(33, 33, 33, 0.2) solid;
 }/*# sourceMappingURL=main.css.map */

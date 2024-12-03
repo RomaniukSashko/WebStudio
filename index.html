@@ -53,6 +53,11 @@
               +38 096 111 11 11</a>
             </li>
           </ul>
+          <button type="button" class="header__button" data-modal-header-open>
+            <svg class="header__menu">
+              <use href="./images/symbol-defs.svg#menu-mobile" class="header__use"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -343,7 +348,7 @@
           <section class="ft__address">
             <h2 class="ft__address__title" hidden>Адреса</h2>
             <a href="./index.html" class="ft__address__link"><span class="ft__address__logo">Web</span>Studio</a>
-            <address class="connect">
+            <div class="connect">
               <a href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4270196,30.5332191,16.17z/data=!4m6!3m5!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858!16s%2Fg%2F1tctq5jv?entry=ttu" target="_blank" class="connect__location">м. Київ, пр-т Лесі Українки, 26</a>
               <ul class="connect__list">
                 <li class="connect__item">
@@ -353,7 +358,7 @@
                   <a href="tel:+380961111111" class="connect__link">+38 096 111 11 11</a>
                 </li>
               </ul>
-            </address>
+            </div>
           </section>
           <!-- Секція Соц. Мережі -->
           <section class="ft__social">
@@ -393,7 +398,7 @@
           <section class="ft__subscribe">
             <h2 class="ft__subscribe__title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h2>
             <form class="ft__subscribe__form">
-              <input id="email" class="ft__subscribe__field" placeholder="E-mail" required>
+              <input id="email" class="ft__subscribe__field" placeholder="E-mail" required autocomplete="off">
               <button class="ft__subscribe__button">
                 Підписатися
                 <svg class="ft__subscribe__icon">
@@ -410,34 +415,36 @@
       <div class="modal">
         <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
         <form class="modal__form">
-          <label for="name" class="modal__text">Ім'я</label>
-          <div class="modal__row">
-            <input type="text" id="name" class="modal__field" required>
-            <svg class="modal__icon">
-              <use class="modal__use" href="./images/symbol-defs.svg#data-name"></use>
-            </svg>
+          <div class="modal__flex">
+            <label for="name" class="modal__text">Ім'я</label>
+            <div class="modal__row">
+              <input type="text" id="name" class="modal__field" required autocomplete="off">
+              <svg class="modal__icon">
+                <use class="modal__use" href="./images/symbol-defs.svg#data-name"></use>
+              </svg>
+            </div>
+            <label for="tel" class="modal__text">Телефон</label>
+            <div class="modal__row">
+              <input type="tel" id="tel" class="modal__field" required autocomplete="off">
+              <svg class="modal__icon">
+                <use class="modal__use" href="./images/symbol-defs.svg#date-tel"></use>
+              </svg>
+            </div>
+            <label for="mail" class="modal__text">Пошта</label>
+            <div class="modal__row">
+              <input type="email" id="mail" class="modal__field" required autocomplete="off">
+              <svg class="modal__icon">
+                <use class="modal__use" href="./images/symbol-defs.svg#data-mail"></use>
+              </svg>
+            </div>
+            <label for="comment" class="modal__text">Коментар</label>
+            <textarea id="comment" class="modal__comment" placeholder="Введіть текст"></textarea>
+            <label for="checkbox" class="modal__check">
+              <input type="checkbox" id="checkbox" class="modal__checkbox" required>
+              <span class="modal__agree">Погоджуюся з розсилкою та приймаю</span>
+              <a href="#" class="modal__conditions" target="_blank">Умови договору</a>
+            </label>
           </div>
-          <label for="tel" class="modal__text">Телефон</label>
-          <div class="modal__row">
-            <input type="tel" id="tel" class="modal__field" required>
-            <svg class="modal__icon">
-              <use class="modal__use" href="./images/symbol-defs.svg#date-tel"></use>
-            </svg>
-          </div>
-          <label for="mail" class="modal__text">Пошта</label>
-          <div class="modal__row">
-            <input type="email" id="mail" class="modal__field" required>
-            <svg class="modal__icon">
-              <use class="modal__use" href="./images/symbol-defs.svg#data-mail"></use>
-            </svg>
-          </div>
-          <label for="comment" class="modal__text">Коментар</label>
-          <textarea id="comment" class="modal__comment" placeholder="Введіть текст"></textarea>
-          <label for="checkbox" class="modal__check">
-            <input type="checkbox" id="checkbox" class="modal__checkbox" required>
-            <span class="modal__agree">Погоджуюся з розсилкою та приймаю</span>
-            <a href="#" class="modal__conditions" target="_blank">Умови договору</a>
-          </label>
           <button type="submit" class="modal__button">Відправити</button>
         </form>
         <button type="button" class="modal__close" data-modal-close>
@@ -447,7 +454,50 @@
         </button>
       </div>
     </div>
+    <!-- Мобільне меню -->
+    <div class="menu is-hidden" data-header-modal>
+      <button type="button" class="menu__button" data-modal-header-close>
+        <svg class="menu__close">
+          <use href="./images/symbol-defs.svg#menu-close" class="menu__use"></use>
+        </svg>
+      </button>
+      <ul class="list-nav">
+        <li class="list-nav__item">
+          <a href="./index.html" class="list-nav__link">Cтудія</a>
+        </li>
+        <li class="list-nav__item">
+          <a href="./pages/portfolio.html" class="list-nav__link">Портфоліо</a>
+        </li>
+        <li class="list-nav__item">
+          <a href="./pages/contacts.html" class="list-nav__link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="list-address">
+        <li class="list-address__item">
+          <a href="tel:+380961111111" class="list-address__link">+38 096 111 11 11</a>
+        </li>
+        <li class="list-address__item">
+          <a href="mailto:info@devstudio.com" class="list-address__link">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="list-social">
+        <li class="list-social__item">
+          <a href="https://www.instagram.com/" class="list-social__link">Instagram</a>
+        </li>
+        <li class="list-social__item">
+          <a href="https://www.x.com/" class="list-social__link">Twitter</a>
+        </li>
+        <li class="list-social__item">
+          <a href="https://www.facebook.com/" class="list-social__link">Facebook</a>
+        </li>
+        <li class="list-social__item">
+          <a href="https://www.linkedin.com/" class="list-social__link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Скрипти Java Script -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
