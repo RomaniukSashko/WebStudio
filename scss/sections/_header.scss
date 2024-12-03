@@ -187,10 +187,14 @@
         background-color: $button-color;
         border-radius: 2px;
         display: block;
-        margin-top: 31px;
+        margin-top: 34px;
         opacity: 0;
         transform: scale(0);
         @include transition($name-transition:transform);
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 31px;
+        }
     }
 
     &__link:hover::after,
@@ -212,7 +216,11 @@
         background-color: $button-color;
         border-radius: 2px;
         display: block;
-        margin-top: 31px;
+        margin-top: 34px;
         opacity: 1;
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 31px;
+        }
     }
 } 

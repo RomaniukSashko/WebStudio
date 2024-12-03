@@ -283,12 +283,17 @@ img {
   background-color: #2196F3;
   border-radius: 2px;
   display: block;
-  margin-top: 31px;
+  margin-top: 34px;
   opacity: 0;
   transform: scale(0);
   transition: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .nav__link::after {
+    margin-top: 31px;
+  }
 }
 .nav__link:hover::after, .nav__link:focus::after {
   opacity: 1;
@@ -311,8 +316,13 @@ img {
   background-color: #2196F3;
   border-radius: 2px;
   display: block;
-  margin-top: 31px;
+  margin-top: 34px;
   opacity: 1;
+}
+@media screen and (min-width: 1200px) {
+  .active::after {
+    margin-top: 31px;
+  }
 }
 
 .hero {
@@ -907,9 +917,10 @@ img {
 }
 .footer__flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
   gap: 60px;
 }
 @media screen and (min-width: 768px) {
@@ -927,7 +938,6 @@ img {
 @media screen and (min-width: 768px) {
   .ft__address {
     margin-right: 165px;
-    margin-left: 61px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1092,7 +1102,6 @@ img {
 }
 @media screen and (min-width: 768px) {
   .ft__subscribe {
-    margin-left: 151px;
     margin-top: 60px;
   }
 }
