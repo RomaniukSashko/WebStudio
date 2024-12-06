@@ -928,17 +928,20 @@ img {
     flex-direction: row;
     gap: 0;
     align-items: start;
+    -moz-column-gap: 165px;
+         column-gap: 165px;
+    row-gap: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__flex {
+    gap: 0;
   }
 }
 
 /* ===== Адреса ===== */
 .ft__address {
   margin-left: 0;
-}
-@media screen and (min-width: 768px) {
-  .ft__address {
-    margin-right: 165px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .ft__address {
@@ -1100,16 +1103,10 @@ img {
     width: 450px;
   }
 }
-@media screen and (min-width: 768px) {
-  .ft__subscribe {
-    margin-top: 60px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .ft__subscribe {
     width: auto;
     margin-left: 0;
-    margin-top: 0;
   }
 }
 .ft__subscribe__title {
