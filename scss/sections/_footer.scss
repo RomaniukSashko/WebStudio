@@ -25,6 +25,7 @@
 
         @media screen and (min-width: 1200px) {
             gap: 0;
+            align-items: first baseline;
         }
     }
 }
@@ -116,14 +117,6 @@
     &__title {
         @include font($color:$header-title, $weight:700, $height:1.14);
         margin-bottom: 20px;
-
-        @media screen and (min-width: 768px) {
-            margin-top: 5px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            margin-top: 12px;
-        }
     }
 
     &__list {
@@ -170,7 +163,6 @@
 
     &__title {
         @include font($color:$header-title, $weight:700, $height:1.14);
-        margin-top: 12px;
         margin-bottom: 20px;
     }
 

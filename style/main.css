@@ -759,8 +759,7 @@ img {
   }
 }
 .team__text {
-  margin-top: 30px;
-  margin-bottom: 16px;
+  padding: 30px 0;
 }
 .team__name {
   font-family: "Roboto";
@@ -785,7 +784,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-top: 16px;
 }
 .social__link {
   width: 44px;
@@ -957,6 +956,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer__flex {
     gap: 0;
+    align-items: first baseline;
   }
 }
 
@@ -1076,16 +1076,6 @@ img {
   letter-spacing: 0.42px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 768px) {
-  .ft__social__title {
-    margin-top: 5px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ft__social__title {
-    margin-top: 12px;
-  }
-}
 .ft__social__list {
   display: flex;
   justify-content: center;
@@ -1137,7 +1127,6 @@ img {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.42px;
-  margin-top: 12px;
   margin-bottom: 20px;
 }
 .ft__subscribe__form {
