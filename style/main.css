@@ -51,6 +51,16 @@ img {
   }
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2196F3;
+  border-radius: 50px;
+}
+
 /* ===== Шапка ===== */
 .header {
   background-color: #FFFFFF;
